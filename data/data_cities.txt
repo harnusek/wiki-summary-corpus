@@ -1,0 +1,429 @@
+POZOR == najskor su slovenske a potom  anglicke, takze nie vsetko bude fungovat
+
+
+Bratislava
+Košice
+Prešov
+Žilina
+Banská Bystrica
+Nitra
+Trnava
+Trenčín
+Martin
+Poprad
+Prievidza
+Zvolen
+Považská Bystrica
+Michalovce
+Nové Zámky
+Spišská Nová Ves
+Komárno
+Humenné
+Levice
+Bardejov
+Liptovský Mikuláš
+Lučenec
+Piešťany
+Ružomberok
+Topoľčany
+Trebišov
+Čadca
+Dubnica nad Váhom
+Rimavská Sobota
+Partizánske
+Vranov nad Topľou
+Dunajská Streda
+Pezinok
+Šaľa
+Hlohovec
+Brezno
+Senica
+Snina
+Nové Mesto nad Váhom
+Žiar nad Hronom
+Rožňava
+Senec
+Dolný Kubín
+Bánovce nad Bebravou
+Púchov
+Malacky
+Handlová
+Kežmarok
+Stará Ľubovňa
+Sereď
+Kysucké Nové Mesto
+Galanta
+Skalica
+Detva
+Levoča
+Šamorín
+Sabinov
+Revúca
+Veľký Krtíš
+Myjava
+Zlaté Moravce
+Bytča
+Moldava nad Bodvou
+Svidník
+Holíč
+Nová Dubnica
+Stupava
+Fiľakovo
+Stropkov
+Kolárovo
+Štúrovo
+Banská Štiavnica
+Šurany
+Tvrdošín
+Veľké Kapušany
+Stará Turá
+Modra
+Krompachy
+Vráble
+Veľký Meder
+Sečovce
+Krupina
+Námestovo
+Vrútky
+Svit
+Turzovka
+Kráľovský Chlmec
+Liptovský Hrádok
+Hriňová
+Hnúšťa
+Hurbanovo
+Nová Baňa
+Trstená
+Šahy
+Tornaľa
+Želiezovce
+Krásno nad Kysucou
+Medzilaborce
+Spišská Belá
+Lipany
+Turčianske Teplice
+Žarnovica
+Nemšová
+Sobrance
+Gelnica
+Veľký Šariš
+Vrbové
+Rajec
+Poltár
+Dobšiná
+Svätý Jur
+Ilava
+Gabčíkovo
+Kremnica
+Sládkovičovo
+Gbely
+Šaštín-Stráže
+Sliač
+Brezová pod Bradlom
+Bojnice
+Medzev
+Strážske
+Turany
+Nováky
+Trenčianske Teplice
+Tisovec
+Leopoldov
+Giraltovce
+Vysoké Tatry
+Spišské Podhradie
+Hanušovce nad Topľou
+Čierna nad Tisou
+Tlmače
+Spišské Vlachy
+Jelšava
+Podolínec
+Rajecké Teplice
+Spišská Stará Ves
+Modrý Kameň
+Dudince
+
+
+Stockholm
+Munich
+Vienna
+Graz
+Linz
+Innsbruck
+Klagenfurt
+Minsk
+Antwerp
+Sarajevo
+Sofia
+Zagreb
+Karlovac
+Omiš
+Prague
+Tallinn
+Alavus
+Helsinki
+Jyväskylä
+Tampere
+Turku
+Paris
+Marseille
+Toulouse
+Tbilisi
+Berlin
+Hamburg
+Cologne
+Stuttgart
+Dortmund
+Bremen
+Dresden
+Leipzig
+Hanover
+Nuremberg
+Duisburg
+Bonn
+Bielefeld
+Mannheim
+Karlsruhe
+Münster
+Wiesbaden
+Augsburg
+Mönchengladbach
+Braunschweig
+Freiburg_im_Breisgau
+Mainz
+Athens
+Patras
+Corinth
+Tripoli,_Greece
+Corfu
+Thebes,_Greece
+Pyrgos,_Elis
+Florina
+Reykjavík
+Dublin
+Belfast
+Rome
+Milan
+Naples
+Turin
+Palermo
+Genoa
+Bologna
+Florence
+Catania
+Venice
+Verona
+Pisa
+Riga
+Vilnius
+Skopje
+Chişinău
+Podgorica
+Budva
+Eindhoven
+Amsterdam
+Enschede
+Dordrecht
+Rotterdam
+The_Hague
+Utrecht_(city)
+Oslo
+Bergen
+Warsaw
+Kraków
+Łódź
+Wrocław
+Gdańsk
+Bielsko-Biała
+Dąbrowa_Górnicza
+Lisbon
+Bucharest
+Timișoara
+Constanța
+Brașov
+Oradea
+Chelyabinsk
+Kaliningrad
+Kazan
+Moscow
+Nizhny_Novgorod
+Saint_Petersburg
+Ulyanovsk
+Belgrade
+Kovačica
+Bratislava
+Košice
+Prešov
+Žilina
+Nitra
+Banská_Bystrica
+Trnava
+Martin,_Slovakia
+Trenčín
+Poprad
+Prievidza
+Zvolen
+Považská_Bystrica
+Nové_Zámky
+Michalovce
+Spišská_Nová_Ves
+Komárno
+Levice
+Humenné
+Bardejov
+Liptovský_Mikuláš
+Ružomberok
+Piešťany
+Topoľčany
+Lučenec
+Čadca
+Dubnica_nad_Váhom
+Rimavská_Sobota
+Partizánske
+Šaľa,_Slovakia
+Dunajská_Streda
+Trebišov
+Vranov_nad_Topľou
+Hlohovec
+Brezno
+Snina
+Pezinok
+Senica
+Nové_Mesto_nad_Váhom
+Bánovce_nad_Bebravou
+Dolný_Kubín
+Žiar_nad_Hronom
+Rožňava
+Púchov
+Malacky
+Handlová
+Sereď
+Kežmarok
+Kysucké_Nové_Mesto
+Stará_Ľubovňa
+Galanta
+Senec_(Slovakia)
+Detva
+Skalica
+Levoča
+Veľký_Krtíš
+Zlaté_Moravce
+Revúca
+Myjava
+Šamorín
+Sabinov
+Svidník
+Nová_Dubnica
+Bytča
+Holíč
+Štúrovo
+Stropkov
+Banská_Štiavnica
+Kolárovo
+Šurany
+Fiľakovo
+Stara_Tura
+Moldava_nad_Bodvou
+Veľké_Kapušany
+Vráble
+Tvrdošín
+Veľký_Meder
+Krompachy
+Modra
+Stupava,_Malacky_District
+Námestovo
+Hurbanovo
+Hriňová
+Tornaľa
+Šahy
+Kráľovský_Chlmec
+Sečovce
+Krupina
+Liptovský_Hrádok
+Turzovka
+Trstená
+Svit
+Želiezovce
+Hnúšťa
+Nová_Baňa
+Vrútky
+Krásno_nad_Kysucou
+Turčianske_Teplice
+Medzilaborce
+Žarnovica
+Lipany
+Vrbové
+Sobrance
+Spišská_Belá
+Nemšová
+Gelnica
+Rajec
+Poltár
+Sládkovičovo
+Kremnica
+Brezová_pod_Bradlom
+Ilava
+Gbely
+Dobšiná
+Šaštín-Stráže
+Bojnice
+Svätý_Jur
+Sliač
+Vysoké_Tatry_(town)
+Strážske
+Veľký_Šariš
+Nováky
+Trenčianske_Teplice
+Čierna_nad_Tisou
+Giraltovce
+Tlmače
+Leopoldov
+Tisovec
+Spišské_Podhradie
+Medzev
+Hanušovce_nad_Topľou
+Spišské_Vlachy
+Podolínec
+Jelšava
+Rajecké_Teplice
+Spišská_Stará_Ves
+Dudince
+Modrý_Kameň
+Ljubljana
+Nova_Gorica
+Škofja_Loka
+Madrid
+Barcelona
+Seville
+Palma,_Majorca
+Santa_Cruz_de_Tenerife
+Davos
+Zurich
+İstanbul
+Ankara
+Konya
+Antalya
+Trabzon
+İznik
+Tirebolu
+Kyiv
+Dnipropetrovsk
+Donetsk
+Luhansk
+Simferopol
+Sevastopol
+Birmingham
+Bristol
+Cambridge
+Liverpool
+London
+Manchester
+Budapest
+Baku
+Astana
+Soči
+Bern
+Vatican_City
+Tirana
+Luxembourg_(city)
+Cairo
+Soul
