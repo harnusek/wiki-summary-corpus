@@ -1,79 +1,79 @@
-Malacky
-Pezinok
-Senec
+Malacky (okres)
+Pezinok (okres)
+Senec (okres)
 Bratislava 1
 Bratislava 2
 Bratislava 3
 Bratislava 4
 Bratislava 5
-Dunajská Streda
-Galanta
-Hlohovec
-Piešťany
-Senica
-Skalica
-Trnava
-Bánovce nad Bebravou
-Ilava
-Myjava
-Nové Mesto nad Váhom
-Partizánske
-Považská Bystrica
-Prievidza
-Púchov
-Trenčín
-Komárno
-Levice
-Nitra
-Nové Zámky
-Šaľa
-Topoľčany
-Zlaté Moravce
-Bytča
-Čadca
-Dolný Kubín
-Kysucké Nové Mesto
-Liptovský Mikuláš
-Martin
-Námestovo
-Ružomberok
-Turčianske Teplice
-Tvrdošín
-Žilina
-Banská Bystrica
-Banská Štiavnica
-Brezno
-Detva
-Krupina
-Lučenec
-Poltár
-Revúca
-Rimavská Sobota
-Veľký Krtíš
-Zvolen
-Žarnovica
-Žiar nad Hronom
-Bardejov
-Humenné
-Kežmarok
-Levoča
-Medzilaborce
-Poprad
-Prešov
-Sabinov
-Snina
-Stará Ľubovňa
-Stropkov
-Svidník
-Vranov nad Topľou
-Gelnica
-Košice 1
-Michalovce
-Rožňava
-Sobrance
-Spišská Nová Ves
-Trebišov
-Košice 2
-Košice 3
-Košice 4
-Košice - okolie
+Dunajská Streda (okres)
+Galanta (okres)
+Hlohovec (okres)
+Piešťany (okres)
+Senica (okres)
+Skalica (okres)
+Trnava (okres)
+Bánovce nad Bebravou (okres)
+Ilava (okres)
+Myjava (okres)
+Nové Mesto nad Váhom (okres)
+Partizánske (okres)
+Považská Bystrica (okres)
+Prievidza (okres)
+Púchov (okres)
+Trenčín (okres)
+Komárno (okres)
+Levice (okres)
+Nitra (okres)
+Nové Zámky (okres)
+Šaľa (okres)
+Topoľčany (okres)
+Zlaté Moravce (okres)
+Bytča (okres)
+Čadca (okres)
+Dolný Kubín (okres)
+Kysucké Nové Mesto (okres)
+Liptovský Mikuláš (okres)
+Martin (okres)
+Námestovo (okres)
+Ružomberok (okres)
+Turčianske Teplice (okres)
+Tvrdošín (okres)
+Žilina (okres)
+Banská Bystrica (okres)
+Banská Štiavnica (okres)
+Brezno (okres)
+Detva (okres)
+Krupina (okres)
+Lučenec (okres)
+Poltár (okres)
+Revúca (okres)
+Rimavská Sobota (okres)
+Veľký Krtíš (okres)
+Zvolen (okres)
+Žarnovica (okres)
+Žiar nad Hronom (okres)
+Bardejov (okres)
+Humenné (okres)
+Kežmarok (okres)
+Levoča (okres)
+Medzilaborce (okres)
+Poprad (okres)
+Prešov (okres)
+Sabinov (okres)
+Snina (okres)
+Stará Ľubovňa (okres)
+Stropkov (okres)
+Svidník (okres)
+Vranov nad Topľou (okres)
+Gelnica (okres)
+Košice I (okres)
+Michalovce (okres)
+Rožňava (okres)
+Sobrance (okres)
+Spišská Nová Ves (okres)
+Trebišov (okres)
+Košice II (okres)
+Košice III (okres)
+Košice IV (okres)
+Košice-okolie (okres)

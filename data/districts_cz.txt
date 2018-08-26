@@ -13,79 +13,79 @@ Praha 12
 Praha 13
 Praha 14
 Praha 15
-Benešov
-Beroun
-Kladno
-Kolín
-Kutná Hora
-Mělník
-Mladá Boleslav
-Nymburk
-Praha-východ
-Praha-západ
-Příbram
-Rakovník
-České Budějovice
-Český Krumlov
-Jindřichův Hradec
-Písek
-Prachatice
-Strakonice
-Tábor
-Domažlice
-Klatovy
-Plzeň-město
-Plzeň-jih
-Plzeň-sever
-Rokycany
-Tachov
-Cheb
-Karlovy Vary
-Sokolov
-Děčín
-Chomutov
-Litoměřice
-Louny
-Most
-Teplice
-Ústí nad Labem
-Česká Lípa
-Jablonec nad Nisou
-Liberec
-Semily
-Hradec Králové
-Jičín
-Náchod
-Rychnov nad Kněžnou
-Trutnov
-Chrudim
-Pardubice
-Svitavy
-Ústí nad Orlicí
-Havlíčkův Brod
-Jihlava
-Pelhřimov
-Třebíč
-Žďár nad Sázavou
-Blansko
-Brno-město
-Brno-venkov
-Břeclav
-Hodonín
-Vyškov
-Znojmo
-Jeseník
-Olomouc
-Prostějov
-Přerov
-Šumperk
-Kroměříž
-Uherské Hradiště
-Vsetín
-Zlín
-Bruntál
-Frýdek-Místek
-Karviná
-Nový Jičín
-Opava
-Ostrava-město
+Okres Benešov
+Okres Beroun
+Okres Kladno
+Okres Kolín
+Okres Kutná Hora
+Okres Mělník
+Okres Mladá Boleslav
+Okres Nymburk
+Okres Praha-východ
+Okres Praha-západ
+Okres Příbram
+Okres Rakovník
+Okres České Budějovice
+Okres Český Krumlov
+Okres Jindřichův Hradec
+Okres Písek
+Okres Prachatice
+Okres Strakonice
+Okres Tábor
+Okres Domažlice
+Okres Klatovy
+Okres Plzeň-mesto
+Okres Plzeň-juh
+Okres Plzeň-sever
+Okres Rokycany
+Okres Tachov
+Okres Cheb
+Okres Karlovy Vary
+Okres Sokolov
+Okres Děčín
+Okres Chomutov
+Okres Litoměřice
+Okres Louny
+Okres Most
+Okres Teplice
+Okres Ústí nad Labem
+Okres Česká Lípa
+Okres Jablonec nad Nisou
+Okres Liberec
+Okres Semily
+Okres Hradec Králové
+Okres Jičín
+Okres Náchod
+Okres Rychnov nad Kněžnou
+Okres Trutnov
+Okres Chrudim
+Okres Pardubice
+Okres Svitavy
+Okres Ústí nad Orlicí
+Okres Havlíčkův Brod
+Okres Jihlava
+Okres Pelhřimov
+Okres Třebíč
+Okres Žďár nad Sázavou
+Okres Blansko
+Okres Brno-mesto
+Okres Brno-venkov
+Okres Břeclav
+Okres Hodonín
+Okres Vyškov
+Okres Znojmo
+Okres Jeseník
+Okres Olomouc
+Okres Prostějov
+Okres Přerov
+Okres Šumperk
+Okres Kroměříž
+Okres Uherské Hradiště
+Okres Vsetín
+Okres Zlín
+Okres Bruntál
+Okres Frýdek-Místek
+Okres Karviná
+Okres Nový Jičín
+Okres Opava
+Okres Ostrava-mesto
