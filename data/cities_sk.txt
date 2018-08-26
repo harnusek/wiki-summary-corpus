@@ -6,7 +6,7 @@ Banská Bystrica
 Nitra
 Trnava
 Trenčín
-Martin
+Martin (mesto na Slovensku)
 Poprad
 Prievidza
 Zvolen
@@ -16,7 +16,7 @@ Nové Zámky
 Spišská Nová Ves
 Komárno
 Humenné
-Levice
+Levice (Slovensko)
 Bardejov
 Liptovský Mikuláš
 Lučenec
@@ -50,14 +50,14 @@ Stará Ľubovňa
 Sereď
 Kysucké Nové Mesto
 Galanta
-Skalica
+Skalica (mesto)
 Detva
 Levoča
 Šamorín
 Sabinov
-Revúca
+Revúca (mesto)
 Veľký Krtíš
-Myjava
+Myjava (mesto)
 Zlaté Moravce
 Bytča
 Moldava nad Bodvou
@@ -82,7 +82,7 @@ Sečovce
 Krupina
 Námestovo
 Vrútky
-Svit
+Svit (mesto)
 Turzovka
 Kráľovský Chlmec
 Liptovský Hrádok
@@ -110,7 +110,7 @@ Poltár
 Dobšiná
 Svätý Jur
 Ilava
-Gabčíkovo
+Gabčíkovo (okres Dunajská Streda)
 Kremnica
 Sládkovičovo
 Gbely
@@ -123,16 +123,16 @@ Strážske
 Turany
 Nováky
 Trenčianske Teplice
-Tisovec
+Tisovec (okres Rimavská Sobota)
 Leopoldov
 Giraltovce
-Vysoké Tatry
+Vysoké Tatry (mesto)
 Spišské Podhradie
 Hanušovce nad Topľou
 Čierna nad Tisou
 Tlmače
 Spišské Vlachy
-Jelšava
+Jelšava (mesto)
 Podolínec
 Rajecké Teplice
 Spišská Stará Ves
