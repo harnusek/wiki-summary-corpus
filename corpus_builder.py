@@ -2,7 +2,7 @@ import os
 import wikipedia
 
 wikipedia.set_lang("sk")
-domain = 'mammals'
+domain = 'plants_sk'
 
 directory = 'data/' + domain + '/'
 source_file = 'data/' + domain + '.txt'
