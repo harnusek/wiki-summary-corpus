@@ -1,0 +1,6 @@
+1055
+Go
+https://sk.wikipedia.org/wiki/Go
+Go je strategická dosková hra pre dvoch hráčov pochádzajúca zo starej Číny medzi rokmi 2000 pred Kr. až 200 pred Kr.. Je veľmi populárna vo východnej Ázii, ale rozširuje sa aj prostredníctvom internetového hrania po celom svete. V Číne sa volá 圍棋 (Pinyin: weiqi, Wade-Giles: Wei-ch'i), v Kórei 바둑 baduk a v Japonsku 囲碁 igo, z ktorého sa odvodilo anglické Go z japonského znaku 碁.
+Hoci pravidlá Go sú veľmi jednoduché, stratégia hry je extrémne komplexná. Go je deterministická strategická hra ako šach, dáma alebo otelo, avšak jej hĺbka prekonáva tieto hry.
+Veľkou výhodou tejto hry je tiež prepracovaný systém handicapov, ktorý umožňuje hrať partiu s otvoreným koncom aj dvom hráčom s veľmi rozdielnou silou.

@@ -2,7 +2,7 @@ import os
 import wikipedia
 
 wikipedia.set_lang("sk")
-domain = 'plants_sk'
+domain = 'sports'
 
 directory = 'data/' + domain + '/'
 source_file = 'data/' + domain + '.txt'
