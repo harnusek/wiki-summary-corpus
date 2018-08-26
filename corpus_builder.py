@@ -2,7 +2,7 @@ import os
 import wikipedia
 
 wikipedia.set_lang("sk")
-domain = 'districts_cz'
+domain = 'peaks_sk'
 
 directory = 'data/' + domain + '/'
 source_file = 'data/' + domain + '.txt'
