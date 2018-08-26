@@ -1,0 +1,79 @@
+Malacky
+Pezinok
+Senec
+Bratislava 1
+Bratislava 2
+Bratislava 3
+Bratislava 4
+Bratislava 5
+Dunajská Streda
+Galanta
+Hlohovec
+Piešťany
+Senica
+Skalica
+Trnava
+Bánovce nad Bebravou
+Ilava
+Myjava
+Nové Mesto nad Váhom
+Partizánske
+Považská Bystrica
+Prievidza
+Púchov
+Trenčín
+Komárno
+Levice
+Nitra
+Nové Zámky
+Šaľa
+Topoľčany
+Zlaté Moravce
+Bytča
+Čadca
+Dolný Kubín
+Kysucké Nové Mesto
+Liptovský Mikuláš
+Martin
+Námestovo
+Ružomberok
+Turčianske Teplice
+Tvrdošín
+Žilina
+Banská Bystrica
+Banská Štiavnica
+Brezno
+Detva
+Krupina
+Lučenec
+Poltár
+Revúca
+Rimavská Sobota
+Veľký Krtíš
+Zvolen
+Žarnovica
+Žiar nad Hronom
+Bardejov
+Humenné
+Kežmarok
+Levoča
+Medzilaborce
+Poprad
+Prešov
+Sabinov
+Snina
+Stará Ľubovňa
+Stropkov
+Svidník
+Vranov nad Topľou
+Gelnica
+Košice 1
+Michalovce
+Rožňava
+Sobrance
+Spišská Nová Ves
+Trebišov
+Košice 2
+Košice 3
+Košice 4
+Košice - okolie
