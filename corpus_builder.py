@@ -2,7 +2,7 @@ import os
 import wikipedia
 
 wikipedia.set_lang("sk")
-domain = 'countries'
+domain = 'cities_int'
 
 directory = 'data/' + domain + '/'
 source_file = 'data/' + domain + '.txt'
@@ -18,6 +18,8 @@ def load_page(name):
             print '\t\t' + o
     except wikipedia.exceptions.PageError as pe:
         print('\t\t : NOT FOUND')
+    except AssertionError as ae:
+        print('\t\t : AssertionError')
 
 def save_summary(page):
     url = page.url
@@ -47,4 +49,4 @@ def process_domain(debug=False):
 
 
 if __name__ == "__main__":
-    process_domain(not True)
+    process_domain(not  True)
