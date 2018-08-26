@@ -5,29 +5,30 @@ Wales
 Afganistan
 Albánsko
 Arménsko
-Austrália
+Austrália (štát)
 Bangladéš
 Burkina
 Bulharsko
 Čína
 Konžská demokratická republika
 Stredoafrická republika
-Kongo
-Pobrežie slonoviny
+Kongo (Brazzaville)
+Konžská demokratická republika
+Pobrežie Slonoviny
 Kamerun
 Alžírsko
-Západná Sahara
+Saharská arabská demokratická republika
 Etiópia
 Fidži
-Mikronézia
+Mikronézia (štát)
 Francúzsko
 Gabon
-Spojené kráľovstvo Veľkej Británie a Severného Írska
+Spojené kráľovstvo
 Gruzínsko
 Ghana
-Guinea
+Guinea (štát)
 Grécko
-Haiti
+Haiti (štát)
 Indonézia
 India
 Irán
@@ -35,8 +36,8 @@ Taliansko
 Jordánsko
 Japonsko
 Keňa
-Severná Kórea (KLDR)
-Južná Kórea
+Kórejská ľudovodemokratická republika
+Kórejská republika
 Kazachstan
 Laos
 Srí Lanka
@@ -50,11 +51,11 @@ Namíbia
 Nová Kaledónia
 Nigéria
 Nový Zéland
-Papua Nová Guinea
+Papua-Nová Guinea
 Srbsko
 Rusko
 Saudská Arábia
-Šalamúnové ostrovy
+Šalamúnove ostrovy (štát)
 Sudán
 Singapur
 Sierra Leone
@@ -101,11 +102,11 @@ Kostarika
 Kuba
 Kapverdy
 Cyprus
-Česká republika
+Česko
 Nemecko
 Džibutsko
 Dánsko
-Dominika
+Dominika (štát)
 Dominikánska republika
 Ekvádor
 Estónsko
@@ -116,14 +117,13 @@ Fínsko
 Falklandy
 Faerské ostrovy
 Grenada
-Džibraltár
 Grónsko
-Gambia
+Gambia (štát)
 Guadeloupe
 Rovníková Guinea
-Guatemala
-Guinea Bissau
-Guyana
+Guatemala (štát)
+Guinea-Bissau
+Guyana (štát)
 Honduras
 Chorvátsko
 Maďarsko
@@ -137,8 +137,8 @@ Kambodža
 Kiribati
 Komory
 Svätý Krištof a Nevis
-Kuvajt
-Kajmanské ostrovy
+Kuvajt (štát)
+Kajmanie ostrovy
 Libanon
 Svätá Lucia
 Lichtenštajnsko
@@ -152,18 +152,18 @@ Monako
 Moldavsko
 Čierna Hora
 Madagaskar
-Marshalove ostrovy
+Marshallove ostrovy
 Macedónsko
 Mongolsko
 Martinik
-Montserrat
+Montserrat (ostrov)
 Malta
 Maurícius
 Maledivy
-Malawi
+Malawi (štát)
 Mexiko
 Niger
-Norfolk
+Norfolk (ostrov)
 Nikaragua
 Holandsko
 Nórsko
@@ -171,24 +171,23 @@ Nepál
 Nauru
 Niue
 Omán
-Panama
+Panama (štát)
 Peru
 Francúzska Polynézia
 Filipíny
 Pakistan
 Poľsko
-Svätý Peter a Michal
 Pitcairnove ostrovy
 Portoriko
 Portugalsko
 Palau
 Paraguaj
-Katar
+Katar (štát)
 Rumunsko
 Rwanda
 Seychely
 Švédsko
-Svätá Helena
+Svätá Helena (zámorské územie)
 Slovinsko
 Slovensko
 San Maríno
@@ -208,15 +207,15 @@ Trinidad a Tobago
 Tuvalu
 Tanzánia
 Ukrajina
-Spojené štáty americké
+Spojené štáty
 Uruguaj
 Uzbekistan
 Vatikán
 Svätý Vincent a Grenadíny
 Venezuela
 Vietnam
-Samoa
+Samoa (nezávislý štát)
 Jemen
 Mayotte
-Juhoafrická republika
+Južná Afrika (štát)
 Zimbabwe
