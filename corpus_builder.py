@@ -2,7 +2,7 @@ import os
 import wikipedia
 
 wikipedia.set_lang("sk")
-domain = 'rivers_sk'
+domain = 'castles_sk'
 
 directory = 'data/' + domain + '/'
 source_file = 'data/' + domain + '.txt'
@@ -11,11 +11,10 @@ source_file = 'data/' + domain + '.txt'
 def load_page(name):
     try:
         page = wikipedia.WikipediaPage(name)
-        print page.title
         return page
     except wikipedia.exceptions.DisambiguationError as e:
-        return load_page(name + ' (rieka)')
-        #for x in e.options:print '\t\t'+x
+        #return load_page(name + ' (rieka)')
+        for x in e.options:print '\t\t'+x
     except wikipedia.exceptions.PageError as pe:
         print('\t\t : NOT FOUND')
     except AssertionError as ae:
@@ -42,7 +41,7 @@ def process_domain(debug=False):
         for name in file.read().splitlines():
             if debug is True:
                 i += 1
-                #print(str(i)+'\t'+name)
+                print(str(i)+'\t'+name)
             p = load_page(name)
             if p is not None and debug is False:
                 save_summary(p)
