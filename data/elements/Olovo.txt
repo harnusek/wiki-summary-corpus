@@ -1,0 +1,5 @@
+98304
+Olovo
+https://sk.wikipedia.org/wiki/Olovo
+Olovo (lat. Plumbum) je chemický prvok v Periodickej tabuľke prvkov, ktorý má značku Pb a protónové číslo 82. Olovo patrí medzi ťažké kovy s nízkym bodom tavenia, je to kujný kov odolný voči korózii (na povrchu sa vytvorí vrstvička oxidov, ktoré zabraňujú ďalšej korózii).
+V prírode sa vyskytuje ako minerál galenit (sulfid olovnatý - PbS) - hlavná ruda olova, prípadne v niektorých ďalších sulfidoch a viacerých sekundárnych mineráloch (ceruzit, anglesit, atď...). Používa sa na ochranu pred rádioaktívnym žiarením, do olovených akumulátorov (napr. v automobiloch) a ako ochranný plášť podmorských a podzemných káblov.

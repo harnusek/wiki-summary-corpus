@@ -2,7 +2,7 @@ import os
 import wikipedia
 
 wikipedia.set_lang("sk")
-domain = 'dogs'
+domain = 'elements'
 
 directory = 'data/' + domain + '/'
 source_file = 'data/' + domain + '.txt'

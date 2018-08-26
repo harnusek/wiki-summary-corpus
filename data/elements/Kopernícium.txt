@@ -1,0 +1,9 @@
+140568
+Kopernícium
+https://sk.wikipedia.org/wiki/Kopern%C3%ADcium
+Kopernícium (lat. copernicium) je chemický prvok v periodickej tabuľke prvkov, ktorý má značku Cn a protónové číslo 112. Je to dvadsiaty transurán a deviaty transaktinoid, silno rádioaktívny kovový chemický prvok, pripravovaný umelo v cyklotróne alebo urýchľovači častíc.
+Medzinárodná únia pre čistú a aplikovanú chémiu (IUPAC) schválila medzinárodný (anglický) názov prvku 20. februára 2010. Predtým bol prvok dočasne pomenovaný ako ununbium. Prvok je pomenovaný po vedcovi Mikulášovi Kopernikovi. 
+Tento prvok zatiaľ nebol izolovaný v dostatočne veľkom množstve, aby bolo možné určiť všetky jeho fyzikálne vlastnosti. Pri svojej polohe v periodickej tabuľke by mohol pripomínať ortuť.
+Prvú prípravu prvku s atómovým číslom 112 oznámili nemeckí fyzici 9. februára 1996 z ústavu na výskum ťažkých iónov v nemeckom Darmstadte. Bombardovaním izotopu olova jadrami zinku získali izotop 277Cn.
+
+208Pb + 70Zn → 277Cn + 1nNajstálejší známy izotop kopernícia je 285Cn s polčasom rozpadu 30 sekúnd.

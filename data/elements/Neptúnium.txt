@@ -1,0 +1,145 @@
+140515
+Neptúnium
+https://sk.wikipedia.org/wiki/Nept%C3%BAnium
+Neptúnium Neptunium, chemická značka Np, (lat. Neptunium) je chemický prvok s protónovým číslom 93 a je prvým z radu transuránov a 5. prvkom z radu aktinoidov. Syntetizovaný bol v roku 1940 E.M. McMillanom a P.H. Abelsonom na Californskej univerzite v Berkeley. Neptúnium bolo syntetizované podľa schémy
+
+  
+    
+      
+        
+
+        
+        
+          
+            
+              n
+            
+          
+          
+            0
+          
+        
+        
+          +
+          
+            92
+          
+          
+            238
+          
+        
+        
+          
+            U
+          
+        
+        →
+        
+          
+
+          
+          
+            93
+          
+          
+            239
+          
+        
+        
+          
+            Np
+          
+        
+        +
+        
+          
+            
+              e
+            
+          
+          
+            −
+          
+        
+      
+    
+    {\displaystyle {}{\hbox{n}}^{0}+_{92}^{238}{\hbox{U}}\to {}_{93}^{239}{\hbox{Np}}+{\hbox{e}}^{-}}
+  .Jadro 
+  
+    
+      
+        
+          
+
+          
+          
+            92
+          
+          
+            239
+          
+        
+        
+          
+            U
+          
+        
+      
+    
+    {\displaystyle {}_{92}^{239}{\hbox{U}}}
+   pohltí neutrón, pričom sa premení na ťažší, ale nestabilný izotop uránu, ktorý sa 
+  
+    
+      
+        β
+      
+    
+    {\displaystyle \beta }
+  -premenou premení na 
+  
+    
+      
+        
+          
+
+          
+          
+            93
+          
+          
+            239
+          
+        
+        
+          
+            Np
+          
+        
+      
+    
+    {\displaystyle {}_{93}^{239}{\hbox{Np}}}
+  . Prvýkrát sa podarilo izolovať makroskopické množstvo neptúnia 
+  
+    
+      
+        
+          
+
+          
+          
+            93
+          
+          
+            237
+          
+        
+        
+          
+            Np
+          
+        
+      
+    
+    {\displaystyle {}_{93}^{237}{\hbox{Np}}}
+   v roku 1944 L.B. Magnusonovi a T.J. La Champelovi. Neptúnium dostalo meno podľa poslednej planéty slnečnej sústavy Neptúna. Ide o umelý rádioaktívny kov striebornej farby.
+Prvé pokusy na prípravu jeho izotopov boli vykonané skôr, v polovici 30. rokov 20. storočia. Navrhnutá metóda používala fakt, že zachytením neutrónov často vzniká beta-aktívny izotop a následne ťažší prvok.

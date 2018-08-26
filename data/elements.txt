@@ -1,118 +1,118 @@
-aktínium (actinium)
-amerícium (americium)
-antimón (stibium)
-argón (argon)
-arzén (arsenicum)
-astát (astatium)
-bárium (barium)
-berkélium (berkelium)
-berýlium (beryllium)
-bizmut (bismuthum)
-bohrium (bohrium)
-bór (borum)
-bróm (bromum)
-cér (cerium)
-cézium (cesium)
-cín (stannum)
-curium (curium)
-darmštátium (darmstadtium)
-draslík (kalium)
-dubnium (dubnium)
-dusík (nitrogenium)
-dysprózium (dysprosium)
-einsteinium (einsteinium)
-erbium (erbium)
-európium (europium)
-fermium (fermium)
-fleróvium (flerovium)
-fluór (fluorum)
-fosfor (phosphorus)
-francium (francium)
-gadolínium (gadolinium)
-gálium (gallium)
-germánium (germanium)
-hafnium (hafnium)
-hásium (hassium)
-hélium (helium)
-hliník (aluminium)
-holmium (holmium)
-horčík (magnesium)
-chlór (chlorum)
-chróm (chromium)
-indium (indium)
-irídium (iridium)
-jód (iodium)
-kadmium (cadmium)
-kobalt (cobaltum)
-kalifornium (californium)
-kopernícium (copernicium)
-kremík (silicium)
-kryptón (krypton)
-kyslík (oxygenium)
-lantán (lanthanum)
-lawrencium (laurencium)
-livermórium (livermorium)
-lítium (lithium)
-lutécium (lutetium)
-mangán (manganum)
-meď (cuprum)
-meitnérium (meitnerium)
-mendelévium (mendelevium)
-molybdén (molybdenum)
-moskóvium (moscovium)
-neodým (neodymium)
-neón (neon)
-neptúnium (neptunium)
-nihónium (nihonium)
-nikel (niccolum)
-niób (niobum)
-nobélium (nobelium)
-oganesón (oganesson)
-olovo (plumbum)
-ortuť (hydrargyrum)
-osmium (osmium)
-paládium (palladium)
-platina (platinum)
-plutónium (plutonium)
-polónium (polonium)
-prazeodým (praseodymium)
-prométium (promethium)
-protaktínium (protactinium)
-radón (radon)
-rádium (radium)
-rénium (rhenium)
-röntgénium (roentgenium)
-ródium (rhodium)
-rubídium (rubidium)
-ruténium (ruthenium)
-rutherfordium (rutherfordium)
-samárium (samarium)
-seaborgium (seaborgium)
-selén (selenium)
-síra (sulfur)
-skandium (scandium)
-sodík (natrium)
-striebro (argentum)
-stroncium (strontium)
-tantal (tantalum)
-tálium (thallium)
-technécium (technetium)
-telúr (tellurium)
-tenés (tennessine)
-terbium (terbium)
-titán (titanium)
-tórium (thorium)
-túlium (thulium)
-uhlík (carboneum)
-urán (uranium)
-vanád (vanadium)
-vápnik (calcium)
-vodík (hydrogenium)
-volfrám (wolframium)
-xenón (xenon)
-yterbium (ytterbium)
-ytrium (yttrium)
-zinok (zincum)
-zirkónium (zirconium)
-zlato (aurum)
-železo (ferrum)
+aktínium
+amerícium
+antimón
+argón
+arzén
+astát
+bárium
+berkélium
+berýlium
+bizmut
+bohrium
+bór
+bróm
+cér
+cézium
+cín
+curium
+darmštátium
+draslík
+dubnium
+dusík
+dysprózium
+einsteinium
+erbium
+európium
+fermium
+fleróvium
+fluór
+fosfor
+francium
+gadolínium
+gálium
+germánium
+hafnium
+hásium
+hélium
+hliník
+holmium
+horčík
+chlór
+chróm
+indium
+irídium
+jód
+kadmium
+kobalt
+kalifornium
+kopernícium
+kremík
+kryptón
+kyslík
+lantán
+lawrencium
+livermórium
+lítium
+lutécium
+mangán
+meď
+meitnérium
+mendelévium
+molybdén
+moskóvium
+neodým
+neón
+neptúnium
+nihónium
+nikel
+niób
+nobélium
+oganesón
+olovo
+ortuť
+osmium
+paládium
+platina
+plutónium
+polónium
+prazeodým
+prométium
+protaktínium
+radón
+rádium
+rénium
+röntgénium
+ródium
+rubídium
+ruténium
+rutherfordium
+samárium
+seaborgium
+selén
+síra
+skandium
+sodík
+striebro
+stroncium
+tantal
+tálium
+technécium
+telúr
+tenés
+terbium
+titán (prvok)
+Tórium
+túlium
+uhlík
+urán (prvok)
+vanád
+vápnik
+vodík
+volfrám
+xenón
+yterbium
+ytrium
+zinok
+zirkónium
+zlato
+železo

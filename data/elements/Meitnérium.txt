@@ -1,0 +1,8 @@
+140538
+Meitnérium
+https://sk.wikipedia.org/wiki/Meitn%C3%A9rium
+Meitnérium, číta sa [majt-], (lat. meitnerium) je chemický prvok v Periodickej tabuľke prvkov, ktorý má značku Mt a protónové číslo 109. Je to 17. transurán a 6. transaktinoid, silno rádioaktívny kovový chemický prvok, pripravovaný umelo v urýchľovačoch ťažkých iónov. Podľa polohy v periodickej tabuľke by vlastnosťami mohol pripomínať irídium.
+Meitnérium, pomenované na počesť rakúskej fyzičky Lise Meitnerovej, syntetizovala v roku 1982 v Ústave pre výskum ťažkých iónov v Darmstadte skupina fyzikov vedená P.Armbrusterom a G. Münzenbergom. Ostreľovali terč bizmutu-209 iónmi železa-58,
+	 209Bi + 58Fe = 266Mt + n 
+Táto reakcia sa vyznačuje nízkou excitačnou energiou zloženého jadra (10 – 20 MeV) a charakterizuje sa preto ako „studená syntéza“. 
+Technikou priestorovej detekcie boli schopní zaregistrovať a identifikovať jediný atóm meitnéria-266, ktorého stredná doba života je 2,5 ms. Syntéza bola zopakovaná v rokoch 1988 a 1997, po čom IUPAC uznala prioritu prípravy a názov prvku.
