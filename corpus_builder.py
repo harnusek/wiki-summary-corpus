@@ -2,7 +2,7 @@ import os
 import wikipedia
 
 wikipedia.set_lang("sk")
-domain = 'cities_int'
+domain = 'regions_sk'
 
 directory = 'data/' + domain + '/'
 source_file = 'data/' + domain + '.txt'
@@ -49,4 +49,4 @@ def process_domain(debug=False):
 
 
 if __name__ == "__main__":
-    process_domain(not  True)
+    process_domain(not True)

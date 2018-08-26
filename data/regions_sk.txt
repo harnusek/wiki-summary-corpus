@@ -1,25 +1,24 @@
 Záhorie
-Trnavsko
 Podunajsko
-Dolné Pohronie
-Poiplie
+Tekov (región)
+Poiplie (región)
 Ponitrie
 Stredné Považie
 Horné Považie
-Tekov
-Hont
+Tekov (región)
+Hont (slovenský región)
 Pohronie
-Turiec
+Turiec (región)
 Horehronie
-Liptov
+Liptov (región)
 Kysuce
-Orava
+Orava (región)
 Podpoľanie
-Novohrad
-Gemer
-Spiš
-Abov
-Šariš
+Novohrad (región)
+Gemer (región)
+Spiš (región)
+Košický región
+Šariš (región)
 Horný Zemplín
 Dolný Zemplín
 Zamagurie
