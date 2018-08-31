@@ -1,0 +1,20 @@
+import os
+import glob
+import psycopg2
+
+def build_database():
+    conn = psycopg2.connect(host="localhost", database="summaries_sk_wikipedia", user="summaries_sk_wikipedia", password="summaries_sk_wikipedia")
+    os.chdir('.\data')
+    for directory in os.listdir('.'):
+        print(directory)
+        os.chdir(directory)
+        for f_name in glob.glob("*.txt"):
+            with open(f_name, 'r') as f:
+                pageid = f.readline().rstrip()
+                title = f.readline().rstrip()
+                print('\t'+pageid+'\t'+title)
+        os.chdir('..')
+
+if __name__ == "__main__":
+    build_database()
+
