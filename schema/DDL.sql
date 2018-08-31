@@ -12,7 +12,7 @@ CREATE TABLE domain
 CREATE TABLE summary
 (
     id serial PRIMARY KEY,
-    title varchar(50) UNIQUE NOT NULL,
+    title varchar(50) NOT NULL,
     pageid integer UNIQUE NOT NULL,
     url varchar(100) UNIQUE NOT NULL,
     domain_id integer NOT NULL REFERENCES domain(id) ON DELETE CASCADE ON UPDATE CASCADE
