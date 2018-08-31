@@ -3,23 +3,29 @@ import os
 import wikipedia
 
 wikipedia.set_lang("sk")
-domain = 'sports'
+domain = 'cars'
 
 directory = 'data/' + domain + '/'
 source_file = 'data/' + domain + '.txt'
 
+def filter_opts(filter,options):
+    match = [s for s in options if filter in s]
+    if match: return match[0]
+    return 'adtggfbxf'
 
 def load_page(name):
     try:
         page = wikipedia.WikipediaPage(name)
+        print(name)
         return page
     except wikipedia.exceptions.DisambiguationError as e:
-        #return load_page(name + ' (rieka)')
-        for x in e.options:print '\t\t'+x
+        return load_page(filter_opts('automobil', e.options))
     except wikipedia.exceptions.PageError as pe:
-        print('\t\t : NOT FOUND')
+        pass
     except AssertionError as ae:
-        print('\t\t : AssertionError')
+        pass
+    except KeyError as ke:
+        pass
 
 def save_summary(page):
     url = page.url
@@ -31,18 +37,14 @@ def save_summary(page):
         file.write(title + '\n')
         file.write(url + '\n')
         file.write(summary)
-    print(title + ' : success')
+    print('\t : success')
 
 
 def process_domain(debug=False):
     if not os.path.exists(directory):
         os.makedirs(directory)
-    i = 0
     with open(source_file) as file:
-        for name in file.read().splitlines():
-            if debug is True:
-                i += 1
-                print(str(i)+'\t'+name)
+        for i,name in enumerate(file.read().splitlines()):
             p = load_page(name)
             if p is not None and debug is False:
                 save_summary(p)

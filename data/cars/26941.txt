@@ -1,0 +1,11 @@
+26941
+Perl
+https://sk.wikipedia.org/wiki/Perl
+Perl (Practical Extraction and Report Language) je univerzálny, interpretovaný (t.j. netreba ho kompilovať) programovací jazyk, vyvinutý v roku 1987, Larrym Wallom, lingvistom, ktorý pracoval ako správca systémov v NASA. Zámerom bolo spraviť jazyk praktický (ľahko používateľný, výkonný, kompletný) a nie nevyhnutne pekný (elegantný, minimalistický). Jazyk prešiel viacerými vývojovými míľnikmi:
+
+Pôvodne bol Perl vyvinutý na manipuláciu textu, dnes sa používa v mnohých oblastiach, od správy systémov, programovanie webov, sieťové programovanie, vývoj GUI, programovanie hier (napr. Construder) a 3D grafiku pomocou OpenGL, až po webové aplikácie, akou je napríklad Wikipédia. Perl 5 beží na viac ako 100 platformách od prenosných zariadení až po mainframy.  
+Medzi hlavné črty Perl-u patrí:
+
+masívna knižnica použiteľného kódu
+kultúra najlepšej praxe a testovania
+vľúdna a otvorená komunitaProgramovať v Perl-e sa dá rôznymi štýlmi v závislosti na projekte, dostupnom čase, očakávanej potreby údržby programu, osobnom štýle. Moto jazyka je TIMTOWTDI (There's more than one way to do it), čo umožňuje tvoriť pekný kód ale aj ťažko čitateľný neporiadok.
