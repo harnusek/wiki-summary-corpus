@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import os
 import wikipedia
 
@@ -25,7 +26,7 @@ def save_summary(page):
     title = page.title.encode('utf-8')
     id = page.pageid
     summary = page.summary.encode('utf-8')
-    with open(directory + page.title + '.txt', 'w') as file:
+    with open(directory + id + '.txt', 'w') as file:
         file.write(id + '\n')
         file.write(title + '\n')
         file.write(url + '\n')
