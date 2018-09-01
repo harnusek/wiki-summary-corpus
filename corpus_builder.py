@@ -4,10 +4,11 @@ import wikipedia
 import time
 
 wikipedia.set_lang("sk")
-domain = 'movies'
+DOMAIN = 'rocks'
+FILTER = 'film'
 
-directory = 'data/' + domain + '/'
-source_file = 'data/' + domain + '.txt'
+directory = 'data/' + DOMAIN + '/'
+source_file = 'data/' + DOMAIN + '.txt'
 
 def filter_opts(filter,options):
     match = [s for s in options if filter in s]
@@ -20,7 +21,7 @@ def load_page(name):
         print(name)
         return page
     except wikipedia.exceptions.DisambiguationError as e:
-        redirect = filter_opts('film', e.options)
+        redirect = filter_opts(FILTER, e.options)
         if redirect: return load_page(redirect)
     except wikipedia.exceptions.PageError as pe:
         pass
@@ -50,7 +51,7 @@ def process_domain(debug=False):
             p = load_page(name)
             if p is not None and debug is False:
                 save_summary(p)
-            time.sleep(2)
+            # time.sleep(2)
 
 if __name__ == "__main__":
     process_domain(not True)
