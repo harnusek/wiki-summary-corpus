@@ -1,9 +1,10 @@
 #!/usr/bin/python
 import os
 import wikipedia
+import time
 
 wikipedia.set_lang("sk")
-domain = 'cars'
+domain = 'movies'
 
 directory = 'data/' + domain + '/'
 source_file = 'data/' + domain + '.txt'
@@ -11,7 +12,7 @@ source_file = 'data/' + domain + '.txt'
 def filter_opts(filter,options):
     match = [s for s in options if filter in s]
     if match: return match[0]
-    return 'adtggfbxf'
+    return None
 
 def load_page(name):
     try:
@@ -19,7 +20,8 @@ def load_page(name):
         print(name)
         return page
     except wikipedia.exceptions.DisambiguationError as e:
-        return load_page(filter_opts('automobil', e.options))
+        redirect = filter_opts('film', e.options)
+        if redirect: return load_page(redirect)
     except wikipedia.exceptions.PageError as pe:
         pass
     except AssertionError as ae:
@@ -48,7 +50,7 @@ def process_domain(debug=False):
             p = load_page(name)
             if p is not None and debug is False:
                 save_summary(p)
-
+            time.sleep(2)
 
 if __name__ == "__main__":
     process_domain(not True)
