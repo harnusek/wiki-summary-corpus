@@ -4,8 +4,8 @@ import wikipedia
 import time
 
 wikipedia.set_lang("sk")
-DOMAIN = 'rocks'
-FILTER = 'film'
+DOMAIN = 'birds'
+FILTER = 'vtak'
 
 directory = 'data/' + DOMAIN + '/'
 source_file = 'data/' + DOMAIN + '.txt'
@@ -51,7 +51,7 @@ def process_domain(debug=False):
             p = load_page(name)
             if p is not None and debug is False:
                 save_summary(p)
-            # time.sleep(2)
+            time.sleep(1)
 
 if __name__ == "__main__":
     process_domain(not True)
