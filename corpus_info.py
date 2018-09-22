@@ -1,9 +1,10 @@
 import os
+from nltk.tokenize import sent_tokenize
 
 DATA_DIR = 'data'
 DB_NAME = 'summaries_sk_wikipedia'
 
-def getInfo():
+def print_info():
     domain_id, summary_id = None, None
     for directory in os.listdir(DATA_DIR):
         # print directory + '\t' + str(len(os.listdir(os.path.join(DATA_DIR, directory))))
@@ -16,6 +17,11 @@ def getInfo():
             print title + '\t' + url
             break
 
-if __name__ == "__main__":
-    getInfo()
+def domain_info():
+    domain_id, summary_id = None, None
+    for directory in os.listdir(DATA_DIR):
+        print directory + '\t' + str(len(os.listdir(os.path.join(DATA_DIR, directory))))
 
+if __name__ == "__main__":
+    # domain_info()
+    # print_info()
