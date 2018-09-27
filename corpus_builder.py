@@ -32,9 +32,9 @@ def load_page(name):
 
 def save_summary(page):
     url = page.url
-    title = page.title.encode('utf-8')
+    title = page.title
     id = page.pageid
-    summary = page.summary.encode('utf-8')
+    summary = page.summary
     with open(directory + id + '.txt', 'w') as file:
         file.write(id + '\n')
         file.write(title + '\n')
@@ -54,4 +54,4 @@ def process_domain(debug=False):
             time.sleep(1)
 
 if __name__ == "__main__":
-    process_domain(not True)
+    process_domain(True)

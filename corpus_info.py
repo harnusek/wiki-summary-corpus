@@ -9,19 +9,20 @@ def print_info():
     for directory in os.listdir(DATA_DIR):
         # print directory + '\t' + str(len(os.listdir(os.path.join(DATA_DIR, directory))))
         for f_name in os.listdir(os.path.join(DATA_DIR, directory)):
-            with open(os.path.join(DATA_DIR, directory,f_name), 'r') as f:
+            with open(os.path.join(DATA_DIR, directory,f_name), 'r', encoding="utf8") as f:
                 pageid = f.readline().rstrip()
-                title = f.readline().rstrip().decode('utf8')
+                title = f.readline().rstrip()
                 url = f.readline().rstrip()
-                all_sent = sent_tokenize(f.read().decode('utf8'))
-            print title + '\t' + url
+                all_sent = sent_tokenize(f.read())
+            print(title + '\t' + url)
+            print(all_sent)
             break
 
-def domain_info():
+def number_sumaries_by_domain():
     domain_id, summary_id = None, None
     for directory in os.listdir(DATA_DIR):
-        print directory + '\t' + str(len(os.listdir(os.path.join(DATA_DIR, directory))))
+        print(directory + '\t' + str(len(os.listdir(os.path.join(DATA_DIR, directory)))))
 
 if __name__ == "__main__":
-    # domain_info()
-    # print_info()
+    # number_sumaries_by_domain()
+    print_info()
