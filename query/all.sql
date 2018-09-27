@@ -2,13 +2,14 @@
 -- delete from summary
 -- delete from sentence
 
-select count(*)
+-- Get size of tables 
+select 'domain' as table, count(*)
 from domain
-
-select count(*)
+union
+select 'summary' as table, count(*)
 from summary
-
-select count(*)
+union
+select 'sentence' as table, count(*)
 from sentence
 
 -- Get number of sentence by summary
