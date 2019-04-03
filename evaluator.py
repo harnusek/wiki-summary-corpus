@@ -28,20 +28,29 @@ def triplet_testing(method, use_lem, use_pos, use_stop):
         "use_pos": use_pos,
         "use_stop": use_stop
     }
-    for sent, sent_POS, sent_NEG in get_triplet():
+    sum_POS  = 0
+    sum_NEG  = 0
+    count  = 0
+    for sent, sent_POS, sent_NEG in triplets(2):
         data["sent_1"] = sent
         data["sent_2"] = sent_POS
         response = requests.post(url, data=json.dumps(data), headers=headers)
         sim_POS = float(response.content)
-
+        sum_POS = sum_POS+sim_POS
         data["sent_1"] = sent
         data["sent_2"] = sent_NEG
         response = requests.post(url, data=json.dumps(data), headers=headers)
         sim_NEG = float(response.content)
-        print(sent[:10], method, use_lem, use_pos, use_stop, sim_POS, 1 - sim_NEG)
+        sum_NEG = sum_NEG+sim_NEG
+        count=count+1
+        # print(sent[:10], method, use_lem, use_pos, use_stop, sim_POS, 1 - sim_NEG)
+    POS = sum_POS/count
+    NEG = 1 - (sum_NEG/count)
+    print('AVG', method, use_lem, use_pos, use_stop, POS, NEG, (POS+NEG)/2)
 
-def get_triplet():
-    return database
+def triplets(count):
+    for _ in range(count):
+        yield database[_]
 
 if __name__ == '__main__':
     all_config_testing()
