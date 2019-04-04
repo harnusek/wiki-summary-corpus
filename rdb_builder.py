@@ -1,9 +1,21 @@
 import os
 import psycopg2
-from nltk.tokenize import sent_tokenize
+import re
+import requests
+import json
 
 DATA_DIR = 'data'
 DB_NAME = 'summaries_sk_wikipedia'
+
+def tokenize(text):
+    text = re.sub(r" ?\([^)]+\)", "", text)
+    url = 'http://nlp.bednarik.top/ssplit/json'
+    payload = {'input': text.encode('utf-8'), 'method': 'STAT'}
+    response = requests.post(url, data=payload)
+    json_str = response.content.decode('utf-8')
+    tree = json.loads(json_str)
+    sentences = [part['originalText'] for part in tree['sentences']]
+    return sentences
 
 def insert_domain(label):
     sql = """INSERT INTO domain(label)
@@ -67,7 +79,7 @@ def build_database():
                 pageid = f.readline().rstrip()
                 title = f.readline().rstrip()
                 url = f.readline().rstrip()
-                all_sent = sent_tokenize(f.read())
+                all_sent = tokenize(f.read())
             # summary_id = insert_summary(title,pageid,url,domain_id)
             print('\t' + title + '\t' + pageid + '\t' + url + '\t'+str(domain_id))
             for rank,text in enumerate(all_sent):
