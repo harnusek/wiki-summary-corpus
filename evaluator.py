@@ -1,10 +1,13 @@
-import unittest
+"""
+Requires running server and database
+"""
+
 import requests
 import json
+import psycopg2
 
-"""
-Requires running server
-"""
+DATA_DIR = 'data'
+DB_NAME = 'summaries_sk_wikipedia'
 
 database = [['Koľko je hodín?', 'Aký je čas?', 'Mám rád čokoládu!'],
             ['Kde chodia vlaky?', 'Ako sa dostanem na stanicu?', 'Mám rád čokoládu!'],
@@ -31,7 +34,7 @@ def triplet_testing(method, use_lem, use_pos, use_stop):
     sum_POS  = 0
     sum_NEG  = 0
     count  = 0
-    for sent, sent_POS, sent_NEG in triplets(2):
+    for sent, sent_POS, sent_NEG in triplets(10):
         data["sent_1"] = sent
         data["sent_2"] = sent_POS
         response = requests.post(url, data=json.dumps(data), headers=headers)
@@ -48,9 +51,36 @@ def triplet_testing(method, use_lem, use_pos, use_stop):
     NEG = 1 - (sum_NEG/count)
     print('AVG', method, use_lem, use_pos, use_stop, POS, NEG, (POS+NEG)/2)
 
+def select_sentences(count, domain):
+    sql = """select sentence.text
+            from sentence
+            join summary on summary_id = summary.id
+            join domain on domain_id = domain.id
+            where sentence.rank = 0 and domain.label = '""" + domain + """'
+            order by summary_id
+            limit """ + str(count)
+    triplets = None
+    try:
+        conn = psycopg2.connect(database=DB_NAME, user=DB_NAME, password=DB_NAME)
+        cur = conn.cursor()
+        cur.execute(sql)
+        triplets = [x[0] for x in cur.fetchall()]
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+    finally:
+        if conn is not None:
+            conn.close()
+            cur.close()
+    return triplets
+    # for _ in range(count):
+    #     yield database[_]
+
 def triplets(count):
-    for _ in range(count):
-        yield database[_]
+    sent = select_sentences(2*count, 'movies')
+    sent_POS = sent[count:]
+    sent_NEG = select_sentences(2*count, 'cities_sk')
+    for i in range(count):
+        yield [sent[i], sent_POS[i], sent_NEG[i]]
 
 if __name__ == '__main__':
     all_config_testing()
