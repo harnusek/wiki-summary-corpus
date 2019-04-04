@@ -5,14 +5,13 @@ Requires running server and database
 import requests
 import json
 import psycopg2
+import time
 
 DATA_DIR = 'data'
 DB_NAME = 'summaries_sk_wikipedia'
-
-database = [['Koľko je hodín?', 'Aký je čas?', 'Mám rád čokoládu!'],
-            ['Kde chodia vlaky?', 'Ako sa dostanem na stanicu?', 'Mám rád čokoládu!'],
-            ['Som chladný', 'Dal by som si obed', 'Mám rád čokoládu!']
-            ]
+NUMBER_OF_TRIPLETS = 6
+DOMAIN_P = 'dogs'
+DOMAIN_N = 'movies'
 
 def all_config_testing():
     for method in ['knowledgeSim','corpusSim']:
@@ -22,6 +21,7 @@ def all_config_testing():
                     triplet_testing(method, use_lem, use_pos, use_stop)
 
 def triplet_testing(method, use_lem, use_pos, use_stop):
+    print(fname)
     headers = {'content-type': 'application/json'}
     url = 'http://localhost:5000/api/' + method
     data = {
@@ -49,7 +49,9 @@ def triplet_testing(method, use_lem, use_pos, use_stop):
         # print(sent[:10], method, use_lem, use_pos, use_stop, sim_POS, 1 - sim_NEG)
     POS = round(sum_POS/count,4)
     NEG = round(sum_NEG/count,4)
-    print('AVG', method,'\tlem:', use_lem,'pos:', use_pos,'stop:', use_stop, POS, NEG, POS-NEG)
+    DIFF = round(POS-NEG,4)
+    file.write('AVG '+method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(POS)+'\t'+str(NEG)+'\t'+str(DIFF)+'\n')
+    print('AVG', method,'\tlem:', use_lem,'pos:', use_pos,'stop:', use_stop, POS, NEG, DIFF)
 
 def select_sentences(count, domain):
     sql = """select sentence.text
@@ -75,13 +77,18 @@ def select_sentences(count, domain):
     # for _ in range(count):
     #     yield database[_]
 
-def triplets(count=3):
-    sent = select_sentences(2*count, 'movies')
-    sent_POS = sent[count:]
-    sent_NEG = select_sentences(2*count, 'cities_sk')
-    for i in range(count):
+def triplets():
+    sent = select_sentences(2*NUMBER_OF_TRIPLETS, DOMAIN_P)
+    sent_POS = sent[NUMBER_OF_TRIPLETS:]
+    sent_NEG = select_sentences(2*NUMBER_OF_TRIPLETS, DOMAIN_N)
+    for i in range(NUMBER_OF_TRIPLETS):
         # print([sent[i], sent_POS[i], sent_NEG[i]])
         yield [sent[i], sent_POS[i], sent_NEG[i]]
 
 if __name__ == '__main__':
+    fname = time.strftime("reports/%Y-%m-%d-%H-%M") + "(" + str(NUMBER_OF_TRIPLETS) + ").txt"
+    file =  open(fname, "a")
+    file.write('['+ DOMAIN_P + + ', ' + DOMAIN_N + '] ')
+    file.write('similarity_matrix_X, pos tagset basic without default\n\n') # <------------POPIS SEM
     all_config_testing()
+    file.close()
