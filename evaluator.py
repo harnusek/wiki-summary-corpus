@@ -34,7 +34,7 @@ def triplet_testing(method, use_lem, use_pos, use_stop):
     sum_POS  = 0
     sum_NEG  = 0
     count  = 0
-    for sent, sent_POS, sent_NEG in triplets(10):
+    for sent, sent_POS, sent_NEG in triplets():
         data["sent_1"] = sent
         data["sent_2"] = sent_POS
         response = requests.post(url, data=json.dumps(data), headers=headers)
@@ -47,9 +47,9 @@ def triplet_testing(method, use_lem, use_pos, use_stop):
         sum_NEG = sum_NEG+sim_NEG
         count=count+1
         # print(sent[:10], method, use_lem, use_pos, use_stop, sim_POS, 1 - sim_NEG)
-    POS = sum_POS/count
-    NEG = 1 - (sum_NEG/count)
-    print('AVG', method, use_lem, use_pos, use_stop, POS, NEG, (POS+NEG)/2)
+    POS = round(sum_POS/count,4)
+    NEG = round(sum_NEG/count,4)
+    print('AVG', method,'\tlem:', use_lem,'pos:', use_pos,'stop:', use_stop, POS, NEG, POS-NEG)
 
 def select_sentences(count, domain):
     sql = """select sentence.text
@@ -75,11 +75,12 @@ def select_sentences(count, domain):
     # for _ in range(count):
     #     yield database[_]
 
-def triplets(count):
+def triplets(count=3):
     sent = select_sentences(2*count, 'movies')
     sent_POS = sent[count:]
     sent_NEG = select_sentences(2*count, 'cities_sk')
     for i in range(count):
+        # print([sent[i], sent_POS[i], sent_NEG[i]])
         yield [sent[i], sent_POS[i], sent_NEG[i]]
 
 if __name__ == '__main__':

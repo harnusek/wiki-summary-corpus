@@ -39,4 +39,5 @@ from sentence
 join summary on summary_id = summary.id
 join domain on domain_id = domain.id
 where sentence.rank = 0 and domain.label = 'movies'
+order by summary_id
 limit 10
