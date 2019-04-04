@@ -69,23 +69,24 @@ def insert_sentence(rank,text,summary_id):
         if conn is not None:
             conn.close()
 
-def build_database():
+def build_database(DEBUG=False):
+    if DEBUG: print('DEBUG on')
     domain_id, summary_id = None, None
     for directory in os.listdir(DATA_DIR):
         print(directory)
-        # domain_id = insert_domain(directory)
+        if not DEBUG: domain_id = insert_domain(directory)
         for f_name in os.listdir(os.path.join(DATA_DIR, directory)):
             with open(os.path.join(DATA_DIR, directory,f_name), 'r', encoding="utf8") as f:
                 pageid = f.readline().rstrip()
                 title = f.readline().rstrip()
                 url = f.readline().rstrip()
                 all_sent = tokenize(f.read())
-            # summary_id = insert_summary(title,pageid,url,domain_id)
+            if not DEBUG: summary_id = insert_summary(title,pageid,url,domain_id)
             print('\t' + title + '\t' + pageid + '\t' + url + '\t'+str(domain_id))
             for rank,text in enumerate(all_sent):
                 print(str(rank) + '\t' + text + '\t'+str(summary_id))
-                # insert_sentence(rank,text,summary_id)
+                if not DEBUG: insert_sentence(rank,text,summary_id)
 
 if __name__ == "__main__":
-    build_database()
+    build_database(DEBUG=True)
 

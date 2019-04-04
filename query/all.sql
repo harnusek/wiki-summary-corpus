@@ -32,3 +32,11 @@ select summary_id, string_agg(text,' ' order by rank)
 from sentence
 group by summary_id
 limit 20
+
+-- Get first sentences of summaries by domain.label
+select sentence.text
+from sentence
+join summary on summary_id = summary.id
+join domain on domain_id = domain.id
+where sentence.rank = 0 and domain.label = 'movies'
+limit 10
