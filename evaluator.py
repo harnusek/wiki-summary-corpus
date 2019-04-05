@@ -10,8 +10,8 @@ import time
 DATA_DIR = 'data'
 DB_NAME = 'summaries_sk_wikipedia'
 NUMBER_OF_TRIPLETS = 6
-DOMAIN_P = 'dogs'
-DOMAIN_N = 'movies'
+DOMAIN_P = 'battles'
+DOMAIN_N = 'cars'
 
 def all_config_testing():
     for method in ['knowledgeSim','corpusSim']:
@@ -46,7 +46,6 @@ def triplet_testing(method, use_lem, use_pos, use_stop):
         sim_NEG = float(response.content)
         sum_NEG = sum_NEG+sim_NEG
         count=count+1
-        # print(sent[:10], method, use_lem, use_pos, use_stop, sim_POS, 1 - sim_NEG)
     POS = round(sum_POS/count,4)
     NEG = round(sum_NEG/count,4)
     DIFF = round(POS-NEG,4)
@@ -88,7 +87,7 @@ def triplets():
 if __name__ == '__main__':
     fname = time.strftime("reports/%Y-%m-%d-%H-%M") + "(" + str(NUMBER_OF_TRIPLETS) + ").txt"
     file =  open(fname, "a")
-    file.write('['+ DOMAIN_P + + ', ' + DOMAIN_N + '] ')
-    file.write('similarity_matrix_X, pos tagset basic without default\n\n') # <------------POPIS SEM
+    file.write('['+ DOMAIN_P + ', ' + DOMAIN_N + '] ')
+    file.write('similarity_matrix_X++, pos tagset basic without default\n\n') # <------------POPIS SEM
     all_config_testing()
     file.close()
