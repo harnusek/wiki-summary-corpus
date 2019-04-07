@@ -6,12 +6,17 @@ import requests
 import json
 import psycopg2
 import time
+import os
+
+domains = ['bands', 'battles', 'birds', 'cars', 'castles_sk', 'cities_sk', 'constellations', 'countries', 'dinosaurs',
+           'dogs', 'elements', 'mammals', 'movies', 'myth_figures', 'peaks_sk', 'plants_sk', 'regions_sk', 'rivers_sk',
+           'rocks', 'sports']
 
 DATA_DIR = 'data'
 DB_NAME = 'summaries_sk_wikipedia'
-NUMBER_OF_TRIPLETS = 6
-DOMAIN_P = 'battles'
-DOMAIN_N = 'cars'
+NUMBER_OF_TRIPLETS = 1
+DOMAIN_P = 'cities_sk'
+DOMAIN_N = 'peaks_sk'
 
 def all_config_testing():
     for method in ['knowledgeSim','corpusSim']:
@@ -84,10 +89,25 @@ def triplets():
         # print([sent[i], sent_POS[i], sent_NEG[i]])
         yield [sent[i], sent_POS[i], sent_NEG[i]]
 
+def triplets_all_domains():
+    pocet = 1
+    database = [select_sentences(2*pocet,domain) for domain in domains]
+    for index in range(len(database)):
+        sent = database[index][:pocet]
+        sent_POS = database[index][pocet:]
+        sent_NEG = database[index-1][pocet:]
+        # print(sent,sent_POS,sent_NEG)
+        for i in range(pocet):
+            yield [sent[i], sent_POS[i], sent_NEG[i]]
+
 if __name__ == '__main__':
-    fname = time.strftime("reports/%Y-%m-%d-%H-%M") + "(" + str(NUMBER_OF_TRIPLETS) + ").txt"
-    file =  open(fname, "a")
-    file.write('['+ DOMAIN_P + ', ' + DOMAIN_N + '] ')
-    file.write('similarity_matrix_X++, pos tagset basic without default\n\n') # <------------POPIS SEM
-    all_config_testing()
-    file.close()
+    for x in triplets_all_domains():
+        print(x)
+
+
+    # fname = time.strftime("reports/%Y-%m-%d-%H-%M") + "(" + str(NUMBER_OF_TRIPLETS) + ").txt"
+    # file =  open(fname, "a")
+    # file.write('['+ DOMAIN_P + ', ' + DOMAIN_N + '] ')
+    # file.write('pos tagset fancy\n\n') # <------------POPIS SEM
+    # all_config_testing()
+    # file.close()
