@@ -19,7 +19,7 @@ DOMAIN_P = 'cities_sk'
 DOMAIN_N = 'peaks_sk'
 
 def all_config_testing():
-    for method in ['knowledgeSim','corpusSim']:
+    for method in ['corpusSim']:
         for use_lem in [True, False]:
             for use_pos in [True, False]:
                 for use_stop in [True, False]:
@@ -39,7 +39,7 @@ def triplet_testing(method, use_lem, use_pos, use_stop):
     sum_POS  = 0
     sum_NEG  = 0
     count  = 0
-    for sent, sent_POS, sent_NEG in triplets():
+    for sent, sent_POS, sent_NEG in triplets_all_domains():
         data["sent_1"] = sent
         data["sent_2"] = sent_POS
         response = requests.post(url, data=json.dumps(data), headers=headers)
@@ -78,8 +78,6 @@ def select_sentences(count, domain):
             conn.close()
             cur.close()
     return triplets
-    # for _ in range(count):
-    #     yield database[_]
 
 def triplets():
     sent = select_sentences(2*NUMBER_OF_TRIPLETS, DOMAIN_P)
@@ -101,13 +99,10 @@ def triplets_all_domains():
             yield [sent[i], sent_POS[i], sent_NEG[i]]
 
 if __name__ == '__main__':
-    for x in triplets_all_domains():
-        print(x)
-
-
-    # fname = time.strftime("reports/%Y-%m-%d-%H-%M") + "(" + str(NUMBER_OF_TRIPLETS) + ").txt"
-    # file =  open(fname, "a")
+    fname = time.strftime("reports/%Y-%m-%d-%H-%M") + "(1x20).txt" #str(NUMBER_OF_TRIPLETS) + ").txt"
+    file =  open(fname, "a")
     # file.write('['+ DOMAIN_P + ', ' + DOMAIN_N + '] ')
-    # file.write('pos tagset fancy\n\n') # <------------POPIS SEM
-    # all_config_testing()
-    # file.close()
+    file.write('[all domains] ')
+    file.write('pos tagset basic rivalF\n\n') # <------------POPIS SEM
+    all_config_testing()
+    file.close()
