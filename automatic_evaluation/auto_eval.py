@@ -9,7 +9,6 @@ import requests
 import json
 import psycopg2
 import time
-import os
 
 domains = ['bands', 'battles', 'birds', 'cars', 'castles_sk', 'cities_sk', 'constellations', 'countries', 'dinosaurs',
            'dogs', 'elements', 'mammals', 'movies', 'myth_figures', 'peaks_sk', 'plants_sk', 'regions_sk', 'rivers_sk',

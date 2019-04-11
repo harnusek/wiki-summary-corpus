@@ -1,0 +1,18 @@
+pos tagset basic
+
+AVG corpusSim	lem:True	pos:True	stop:True	0.6544	=1 - 0.3456
+AVG corpusSim	lem:True	pos:True	stop:False	0.6544	=1 - 0.3456
+AVG corpusSim	lem:True	pos:False	stop:True	0.2531	=1 - 0.7469
+AVG corpusSim	lem:True	pos:False	stop:False	0.2531	=1 - 0.7469
+AVG corpusSim	lem:False	pos:True	stop:True	0.6544	=1 - 0.3456
+AVG corpusSim	lem:False	pos:True	stop:False	0.6544	=1 - 0.3456
+AVG corpusSim	lem:False	pos:False	stop:True	0.2531	=1 - 0.7469
+AVG corpusSim	lem:False	pos:False	stop:False	0.2531	=1 - 0.7469
+AVG knowledgeSim	lem:True	pos:True	stop:True	0.5	=1 - 0.5
+AVG knowledgeSim	lem:True	pos:True	stop:False	0.5	=1 - 0.5
+AVG knowledgeSim	lem:True	pos:False	stop:True	0.0	=1 - 1.0
+AVG knowledgeSim	lem:True	pos:False	stop:False	0.0	=1 - 1.0
+AVG knowledgeSim	lem:False	pos:True	stop:True	0.5	=1 - 0.5
+AVG knowledgeSim	lem:False	pos:True	stop:False	0.5	=1 - 0.5
+AVG knowledgeSim	lem:False	pos:False	stop:True	0.0	=1 - 1.0
+AVG knowledgeSim	lem:False	pos:False	stop:False	0.0	=1 - 1.0
