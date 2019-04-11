@@ -7,9 +7,7 @@ Requires running server and outputs from experiment
 
 import requests
 import json
-import psycopg2
-import time
-import os
+import io
 
 EXPERIMENT_NAME = 'ondrej'
 
@@ -24,8 +22,8 @@ def compare_method(method, use_lem, use_pos, use_stop):
     agg_difference = 0
     number_experiments = len(experiment["rows"])
     for row in experiment["rows"]:
-        sent_1 = row["sent1"]
-        sent_2 = row["sent2"]
+        sent_1 = row["sent_1"]
+        sent_2 = row["sent_2"]
         man_sim = row["sim"]
 
         computed_sim = get_similarity(sent_1,sent_2,method, use_lem, use_pos, use_stop)
@@ -53,10 +51,32 @@ def load_experiment():
         json_str = json_file.read()
         return json.loads(json_str)
 
+def just_temporary():
+    rows = []
+    sent_1, sent_2, sim = None, None, None
+    with open('select-sentences.txt', 'r', encoding="utf8") as fp:
+        line = fp.readline()
+        cnt = 0
+        while line:
+            if(cnt%3 == 0):
+                sent_1 = line.strip()
+            if(cnt%3 == 1):
+                sent_2 = line.strip()
+            if(cnt%3 == 2):
+                sim = line.strip()
+                rows.append({"sent_1":sent_1, "sent_2":sent_2, "sim":sim})
+            line = fp.readline()
+            cnt += 1
+
+    dictionary = {"rows":rows}
+    with io.open('output.json', 'w', encoding='utf8') as json_file:
+        json.dump(dictionary, json_file, ensure_ascii=False)
+
 if __name__ == '__main__':
-    experiment = load_experiment()
-    fname = "reports/" + EXPERIMENT_NAME + "-comparation.txt"
-    file = open(fname, "w")
-    file.write('pos tagset basic\n\n')
-    all_config_testing()
-    file.close()
+    just_temporary()
+    # experiment = load_experiment()
+    # fname = "reports/" + EXPERIMENT_NAME + "-comparation.txt"
+    # file = open(fname, "w")
+    # file.write('pos tagset basic\n\n')
+    # all_config_testing()
+    # file.close()
