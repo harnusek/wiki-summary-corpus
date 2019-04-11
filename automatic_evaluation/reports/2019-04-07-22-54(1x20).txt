@@ -1,0 +1,10 @@
+[all domains] pos tagset basic averaging vectors
+
+AVG corpusSim	lem:True	pos:True	stop:True	0.7505	0.5475	0.203
+AVG corpusSim	lem:True	pos:True	stop:False	0.6655	0.358	0.3075
+AVG corpusSim	lem:True	pos:False	stop:True	0.7262	0.4197	0.3065
+AVG corpusSim	lem:True	pos:False	stop:False	0.6801	0.2962	0.3839
+AVG corpusSim	lem:False	pos:True	stop:True	0.6265	0.3661	0.2604
+AVG corpusSim	lem:False	pos:True	stop:False	0.5464	0.1673	0.3791
+AVG corpusSim	lem:False	pos:False	stop:True	0.657	0.2748	0.3822
+AVG corpusSim	lem:False	pos:False	stop:False	0.6379	0.1886	0.4493

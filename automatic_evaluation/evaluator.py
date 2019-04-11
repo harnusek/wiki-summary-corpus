@@ -19,7 +19,7 @@ DOMAIN_P = 'cities_sk'
 DOMAIN_N = 'peaks_sk'
 
 def all_config_testing():
-    for method in ['corpusSim']:
+    for method in ['corpusSim','knowledgeSim']:
         for use_lem in [True, False]:
             for use_pos in [True, False]:
                 for use_stop in [True, False]:
@@ -103,6 +103,6 @@ if __name__ == '__main__':
     file =  open(fname, "a")
     # file.write('['+ DOMAIN_P + ', ' + DOMAIN_N + '] ')
     file.write('[all domains] ')
-    file.write('pos tagset basic rivalF\n\n') # <------------POPIS SEM
+    file.write('pos tagset basic, knowled with jaccard\n\n') # <------------POPIS SEM
     all_config_testing()
     file.close()
