@@ -41,3 +41,12 @@ join domain on domain_id = domain.id
 where sentence.rank = 0 and domain.label = 'movies'
 order by summary_id
 limit 10
+
+-- IAM TRYING FIND 100 BEST SENTENCES
+select sentence.text
+from sentence
+join summary on summary_id = summary.id
+join domain on domain_id = 4
+-- where sentence.rank = 0
+order by RANDOM()
+limit 4
