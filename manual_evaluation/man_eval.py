@@ -8,6 +8,7 @@ Requires running server and outputs from experiment
 import requests
 import json
 import io
+from random import shuffle
 
 EXPERIMENT_NAME = 'ondrej'
 
@@ -51,7 +52,7 @@ def load_experiment():
         json_str = json_file.read()
         return json.loads(json_str)
 
-def just_temporary():
+def generate_json_from_select_sentences():
     rows = []
     sent_1, sent_2, sim = None, None, None
     with open('select-sentences.txt', 'r', encoding="utf8") as fp:
@@ -64,16 +65,17 @@ def just_temporary():
                 sent_2 = line.strip()
             if(cnt%3 == 2):
                 sim = line.strip()
-                rows.append({"sent_1":sent_1, "sent_2":sent_2, "sim":sim})
+                rows.append({"sent_1":sent_1, "sent_2":sent_2, "sim":float(sim)})
             line = fp.readline()
             cnt += 1
 
+    shuffle(rows)
     dictionary = {"rows":rows}
     with io.open('output.json', 'w', encoding='utf8') as json_file:
         json.dump(dictionary, json_file, ensure_ascii=False)
 
 if __name__ == '__main__':
-    just_temporary()
+    generate_json_from_select_sentences()
     # experiment = load_experiment()
     # fname = "reports/" + EXPERIMENT_NAME + "-comparation.txt"
     # file = open(fname, "w")
