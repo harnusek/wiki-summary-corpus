@@ -52,7 +52,7 @@ def load_experiment():
         json_str = json_file.read()
         return json.loads(json_str)
 
-def generate_json_from_select_sentences():
+def generate_json_from_select_sentences(name):
     rows = []
     sent_1, sent_2, sim = None, None, None
     with open('select-sentences.txt', 'r', encoding="utf8") as fp:
@@ -70,12 +70,13 @@ def generate_json_from_select_sentences():
             cnt += 1
 
     shuffle(rows)
+    print('rows:',len(rows))
     dictionary = {"rows":rows}
-    with io.open('output.json', 'w', encoding='utf8') as json_file:
+    with io.open(name+'.json', 'w', encoding='utf8') as json_file:
         json.dump(dictionary, json_file, ensure_ascii=False)
 
 if __name__ == '__main__':
-    generate_json_from_select_sentences()
+    generate_json_from_select_sentences(name = 'ondrej')
     # experiment = load_experiment()
     # fname = "reports/" + EXPERIMENT_NAME + "-comparation.txt"
     # file = open(fname, "w")
