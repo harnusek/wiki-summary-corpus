@@ -10,7 +10,7 @@ import json
 import io
 from random import shuffle
 
-EXPERIMENT_NAME = 'ondrej'
+EXPERIMENT_NAME = 'average'
 
 def all_config_testing():
     for method in ['corpusSim','knowledgeSim']:
@@ -20,7 +20,7 @@ def all_config_testing():
                     compare_method(method, use_lem, use_pos, use_stop)
 
 def compare_method(method, use_lem, use_pos, use_stop):
-    agg_difference = 0
+    sum_difference = 0
     number_experiments = len(experiment["rows"])
     for row in experiment["rows"]:
         sent_1 = row["sent_1"]
@@ -28,11 +28,12 @@ def compare_method(method, use_lem, use_pos, use_stop):
         man_sim = row["sim"]
 
         computed_sim = get_similarity(sent_1,sent_2,method, use_lem, use_pos, use_stop)
-        agg_difference = agg_difference + abs(man_sim - computed_sim)
+        sum_difference = sum_difference + abs(man_sim - computed_sim)
         # print(man_sim, computed_sim, method + str(use_lem) + str(use_pos) + str(use_stop) + ' ' + sent_1 + ' ' + sent_2)
 
-    avg_diff = round(agg_difference/number_experiments, 4)
+    avg_diff = round(sum_difference/number_experiments, 4)
     file.write('AVG '+method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(avg_diff)+'\t=1 - '+str(1-avg_diff)+'\n')
+    print('AVG '+method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(avg_diff)+'\t=1 - '+str(1-avg_diff)+'\n')
 
 def get_similarity(sent_1, sent_2, method, use_lem, use_pos, use_stop):
     headers = {'content-type': 'application/json'}
@@ -47,15 +48,15 @@ def get_similarity(sent_1, sent_2, method, use_lem, use_pos, use_stop):
     response = requests.post(url, data=json.dumps(data), headers=headers)
     return float(response.content)
 
-def load_experiment():
-    with open('experiments/'+EXPERIMENT_NAME+'.json', 'r', encoding="utf8") as json_file:
+def load_experiment(name):
+    with open('experiments/'+name+'.json', 'r', encoding="utf8") as json_file:
         json_str = json_file.read()
         return json.loads(json_str)
 
 def generate_json_from_select_sentences(name):
     rows = []
     sent_1, sent_2, sim = None, None, None
-    with open('select-sentences.txt', 'r', encoding="utf8") as fp:
+    with open(name + '.txt', 'r', encoding="utf8") as fp:
         line = fp.readline()
         cnt = 0
         while line:
@@ -68,7 +69,6 @@ def generate_json_from_select_sentences(name):
                 rows.append({"sent_1":sent_1, "sent_2":sent_2, "sim":float(sim)})
             line = fp.readline()
             cnt += 1
-
     shuffle(rows)
     print('rows:',len(rows))
     dictionary = {"rows":rows}
@@ -76,10 +76,10 @@ def generate_json_from_select_sentences(name):
         json.dump(dictionary, json_file, ensure_ascii=False)
 
 if __name__ == '__main__':
-    generate_json_from_select_sentences(name = 'ondrej')
-    # experiment = load_experiment()
-    # fname = "reports/" + EXPERIMENT_NAME + "-comparation.txt"
-    # file = open(fname, "w")
-    # file.write('pos tagset basic\n\n')
-    # all_config_testing()
-    # file.close()
+    # generate_json_from_select_sentences(name = EXPERIMENT_NAME)
+    experiment = load_experiment(EXPERIMENT_NAME)
+    fname = "reports/" + EXPERIMENT_NAME + "-comparation--short.txt"
+    file = open(fname, "w")
+    file.write('pos tagset basic, ' + EXPERIMENT_NAME + ' experiment comparation\n\n')
+    all_config_testing()
+    file.close()
