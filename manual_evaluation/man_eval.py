@@ -9,7 +9,7 @@ import requests
 import json
 import io
 from random import shuffle
-
+import math
 EXPERIMENT_NAME = 'average'
 
 def all_config_testing():
@@ -28,12 +28,14 @@ def compare_method(method, use_lem, use_pos, use_stop):
         man_sim = row["sim"]
 
         computed_sim = get_similarity(sent_1,sent_2,method, use_lem, use_pos, use_stop)
-        sum_difference = sum_difference + abs(man_sim - computed_sim)
+        diff = man_sim - computed_sim
+        sum_difference = sum_difference + (diff*diff)
         # print(man_sim, computed_sim, method + str(use_lem) + str(use_pos) + str(use_stop) + ' ' + sent_1 + ' ' + sent_2)
 
-    avg_diff = round(sum_difference/number_experiments, 4)
-    file.write('AVG '+method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(avg_diff)+'\t=1 - '+str(1-avg_diff)+'\n')
-    print('AVG '+method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(avg_diff)+'\t=1 - '+str(1-avg_diff)+'\n')
+    avg_diff = sum_difference/(number_experiments-2)
+    error = round(math.sqrt(avg_diff), 4)
+    file.write('AVG '+method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(error)+'\t=1 - '+str(1-error)+'\n')
+    print('AVG '+method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(error)+'\t=1 - '+str(1-error)+'\n')
 
 def get_similarity(sent_1, sent_2, method, use_lem, use_pos, use_stop):
     headers = {'content-type': 'application/json'}
@@ -78,7 +80,7 @@ def generate_json_from_select_sentences(name):
 if __name__ == '__main__':
     # generate_json_from_select_sentences(name = EXPERIMENT_NAME)
     experiment = load_experiment(EXPERIMENT_NAME)
-    fname = "reports/" + EXPERIMENT_NAME + "-comparation--short.txt"
+    fname = "reports/" + EXPERIMENT_NAME + "-comparation--e.txt"
     file = open(fname, "w")
     file.write('pos tagset basic, ' + EXPERIMENT_NAME + ' experiment comparation\n\n')
     all_config_testing()

@@ -1,0 +1,18 @@
+pos tagset basic, average experiment comparation
+
+AVG corpusSim	lem:True	pos:True	stop:True	0.1899	=1 - 0.8101
+AVG corpusSim	lem:True	pos:True	stop:False	0.2015	=1 - 0.7985
+AVG corpusSim	lem:True	pos:False	stop:True	0.1945	=1 - 0.8055
+AVG corpusSim	lem:True	pos:False	stop:False	0.186	=1 - 0.8140000000000001
+AVG corpusSim	lem:False	pos:True	stop:True	0.214	=1 - 0.786
+AVG corpusSim	lem:False	pos:True	stop:False	0.245	=1 - 0.755
+AVG corpusSim	lem:False	pos:False	stop:True	0.2002	=1 - 0.7998000000000001
+AVG corpusSim	lem:False	pos:False	stop:False	0.2013	=1 - 0.7987
+AVG knowledgeSim	lem:True	pos:True	stop:True	0.2853	=1 - 0.7147
+AVG knowledgeSim	lem:True	pos:True	stop:False	0.3393	=1 - 0.6607000000000001
+AVG knowledgeSim	lem:True	pos:False	stop:True	0.232	=1 - 0.768
+AVG knowledgeSim	lem:True	pos:False	stop:False	0.2664	=1 - 0.7336
+AVG knowledgeSim	lem:False	pos:True	stop:True	0.3803	=1 - 0.6196999999999999
+AVG knowledgeSim	lem:False	pos:True	stop:False	0.3975	=1 - 0.6025
+AVG knowledgeSim	lem:False	pos:False	stop:True	0.2868	=1 - 0.7132000000000001
+AVG knowledgeSim	lem:False	pos:False	stop:False	0.3161	=1 - 0.6839
