@@ -2,6 +2,10 @@
 -- delete from summary
 -- delete from sentence
 
+-- select count(domain_id)
+-- from summary
+-- group by domain_id
+
 -- Get size of tables 
 select 'domain' as table, count(*)
 from domain
