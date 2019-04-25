@@ -1,5 +1,0 @@
-0.00 - 0.20 --> 0.10 žiadna podobnosť
-0.20 - 0.40 --> 0.30 málo podobný význam
-0.40 - 0.60 --> 0.50 stredne podobný význam
-0.60 - 0.80 --> 0.70 veľmi podobný význam
-0.80 - 1.00 --> 0.90 úplne rovnaký význam
