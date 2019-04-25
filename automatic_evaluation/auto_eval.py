@@ -10,15 +10,11 @@ import json
 import psycopg2
 import time
 
-domains = ['bands', 'battles', 'birds', 'cars', 'castles_sk', 'cities_sk', 'constellations', 'countries', 'dinosaurs',
+DOMAINS = ['bands', 'battles', 'birds', 'cars', 'castles_sk', 'cities_sk', 'constellations', 'countries', 'dinosaurs',
            'dogs', 'elements', 'mammals', 'movies', 'myth_figures', 'peaks_sk', 'plants_sk', 'regions_sk', 'rivers_sk',
            'rocks', 'sports']
-
 DATA_DIR = 'data'
 DB_NAME = 'summaries_sk_wikipedia'
-NUMBER_OF_TRIPLETS = 1
-DOMAIN_P = 'cities_sk'
-DOMAIN_N = 'peaks_sk'
 
 def all_config_testing():
     for method in ['corpusSim','knowledgeSim']:
@@ -81,17 +77,9 @@ def select_sentences(count, domain):
             cur.close()
     return triplets
 
-def triplets():
-    sent = select_sentences(2*NUMBER_OF_TRIPLETS, DOMAIN_P)
-    sent_POS = sent[NUMBER_OF_TRIPLETS:]
-    sent_NEG = select_sentences(2*NUMBER_OF_TRIPLETS, DOMAIN_N)
-    for i in range(NUMBER_OF_TRIPLETS):
-        # print([sent[i], sent_POS[i], sent_NEG[i]])
-        yield [sent[i], sent_POS[i], sent_NEG[i]]
-
 def triplets_all_domains():
     pocet = 1
-    database = [select_sentences(2*pocet,domain) for domain in domains]
+    database = [select_sentences(2*pocet,domain) for domain in DOMAINS]
     for index in range(len(database)):
         sent = database[index][:pocet]
         sent_POS = database[index][pocet:]
@@ -101,10 +89,9 @@ def triplets_all_domains():
             yield [sent[i], sent_POS[i], sent_NEG[i]]
 
 if __name__ == '__main__':
-    fname = time.strftime("reports/%Y-%m-%d-%H-%M") + "(1x20).txt" #str(NUMBER_OF_TRIPLETS) + ").txt"
+    fname = time.strftime("reports/%Y-%m-%d-%H-%M") + "(1x20).txt"
     file =  open(fname, "a")
-    # file.write('['+ DOMAIN_P + ', ' + DOMAIN_N + '] ')
     file.write('[all domains] ')
-    file.write('pos tagset basic, knowled with jaccard\n\n') # <------------POPIS SEM
+    file.write('pos tagset basic, knowled with jaccard\n\n')
     all_config_testing()
     file.close()
