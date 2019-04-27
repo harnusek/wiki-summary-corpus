@@ -52,17 +52,11 @@ def averaged_experiments():
     for name in names:
         experiments.append(load_experiment(name))
     final = []
-    lavg, lall = [],[]
     for exp in zip(*experiments):
         sims = [line['sim'] for line in exp]
         # averaging similarity of all experiments
         avg_sim = (sum(sims)/len(sims))
-        # print(sims, avg_sim/4)
-        lall.append(sims)
-        lavg.append(avg_sim/4)
         final.append(({'sent_1':exp[0]['sent_1'], 'sent_2':exp[0]['sent_2'], 'sim':avg_sim}))
-    print(lall)
-    print(lavg)
     return final
 
 def load_experiment(name):
