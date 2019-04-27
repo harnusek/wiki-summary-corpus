@@ -34,13 +34,11 @@ def compare_method(method, use_lem, use_pos, use_stop):
         sent_1 = row["sent_1"]
         sent_2 = row["sent_2"]
         man_sim = row["sim"]
-
         computed_sim = get_similarity(sent_1,sent_2,method, use_lem, use_pos, use_stop)
-        diff = man_sim - computed_sim
-        sum_difference = sum_difference + (diff*diff)
-
-    avg_diff = sum_difference/(number_experiments-2)
-    error = round(math.sqrt(avg_diff), 4)
+        diff = (man_sim - computed_sim)
+        sum_difference = sum_difference + abs(diff)
+    avg_diff = sum_difference/number_experiments
+    error = round(avg_diff, 4)
     file.write(method+'\t'+str(use_lem)+'\t'+str(use_pos)+'\t'+str(use_stop)+'\t'+str(error)+'\n')
     print(method+'\t'+str(use_lem)+'\t'+str(use_pos)+'\t'+str(use_stop)+'\t'+str(error)+'\n')
 
@@ -78,7 +76,7 @@ def averaged_experiments():
     for exp in zip(*experiments):
         sims = [line['sim'] for line in exp]
         # averaging similarity of all experiments
-        avg_sim = (sum(sims)/len(sims))
+        avg_sim = (sum(sims)/len(sims))/4
         final.append(({'sent_1':exp[0]['sent_1'], 'sent_2':exp[0]['sent_2'], 'sim':avg_sim}))
     return final
 
