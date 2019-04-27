@@ -40,7 +40,7 @@ def compare_method(method, use_lem, use_pos, use_stop):
     avg_diff = sum_difference/number_experiments
     error = round(avg_diff, 4)
     file.write(method+'\t'+str(use_lem)+'\t'+str(use_pos)+'\t'+str(use_stop)+'\t'+str(error)+'\n')
-    print(method+'\t'+str(use_lem)+'\t'+str(use_pos)+'\t'+str(use_stop)+'\t'+str(error)+'\n')
+    print(method+'\t'+str(use_lem)+'\t'+str(use_pos)+'\t'+str(use_stop)+'\t'+str(error))
 
 def get_similarity(sent_1, sent_2, method, use_lem, use_pos, use_stop):
     """
@@ -107,7 +107,7 @@ if __name__ == '__main__':
     EXPERIMENT = averaged_experiments()
     fname = "reports/man-eval-report-averaged.txt"
     file = open(fname, "w")
-    file.write('method\tuse_lem\tuse_pos\tuse_stop\terror\n')
-    print('method\tuse_lem\tuse_pos\tuse_stop\terror')
+    file.write('method\t\tuse_lem\tuse_pos\tuse_stop\terror\n')
+    print('method\t\tuse_lem\tuse_pos\tuse_stop\terror')
     all_config_testing()
     file.close()
