@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-Requires running server and outputs from experiment
+Creates manual evaluation of semantic-similarity-tool with every configuration
+Requires running server and outputs from experiments
 """
 import requests
 import json
@@ -10,6 +11,9 @@ import math
 import os
 
 def all_config_testing():
+    """
+    Start evaluation with every configuration
+    """
     for method in ['corpusSim','knowledgeSim']:
         for use_lem in [True, False]:
             for use_pos in [True, False]:
@@ -17,6 +21,13 @@ def all_config_testing():
                     compare_method(method, use_lem, use_pos, use_stop)
 
 def compare_method(method, use_lem, use_pos, use_stop):
+    """
+    Start evaluation with params
+    :param method:
+    :param use_lem:
+    :param use_pos:
+    :param use_stop:
+    """
     sum_difference = 0
     number_experiments = len(EXPERIMENT)
     for row in EXPERIMENT:
@@ -30,10 +41,19 @@ def compare_method(method, use_lem, use_pos, use_stop):
 
     avg_diff = sum_difference/(number_experiments-2)
     error = round(math.sqrt(avg_diff), 4)
-    file.write('AVG '+method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(error)+'\t=1 - '+str(1-error)+'\n')
-    print('AVG '+method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(error)+'\t=1 - '+str(1-error)+'\n')
+    file.write(method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(error)+'\n')
+    print(method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(error)+'\n')
 
 def get_similarity(sent_1, sent_2, method, use_lem, use_pos, use_stop):
+    """
+    :param sent_1:
+    :param sent_2:
+    :param method:
+    :param use_lem:
+    :param use_pos:
+    :param use_stop:
+    :return: Semantic simmilarity from semantic-similaraty-tool
+    """
     headers = {'content-type': 'application/json'}
     url = 'http://localhost:5000/api/' + method
     data = {
@@ -47,6 +67,9 @@ def get_similarity(sent_1, sent_2, method, use_lem, use_pos, use_stop):
     return float(response.content)
 
 def averaged_experiments():
+    """
+    :return: List of tagged pairs of sentences by average of all experiments
+    """
     names = os.listdir("experiments")
     experiments = list()
     for name in names:
@@ -60,6 +83,10 @@ def averaged_experiments():
     return final
 
 def load_experiment(name):
+    """
+    :param name:
+    :return: List of tagged pairs of sentences from one experiment
+    """
     rows = []
     sent_1, sent_2, sim = None, None, None
     with open('experiments/'+name, 'r', encoding='utf8') as file_in:
@@ -80,8 +107,8 @@ def load_experiment(name):
 
 if __name__ == '__main__':
     EXPERIMENT = averaged_experiments()
-    # fname = "reports/report-averaged-new.txt"
-    # file = open(fname, "w")
-    # file.write('pos tagset basic, experiment comparation\n\n')
-    # all_config_testing()
-    # file.close()
+    fname = "reports/man-eval-report-averaged.txt"
+    file = open(fname, "w")
+    file.write('method\tlem:use_lem\tpos:use_pos\tstop:use_stop\terror\n')
+    all_config_testing()
+    file.close()
