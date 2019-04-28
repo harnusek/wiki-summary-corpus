@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
+Creates automatic evaluation of semantic-similarity-tool with every configuration
 Requires running server and database
 """
 

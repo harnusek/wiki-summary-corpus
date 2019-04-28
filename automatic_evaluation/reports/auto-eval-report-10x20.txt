@@ -1,0 +1,17 @@
+method		        use_lem	use_pos	use_stop pos    neg     diff
+AVG corpusSim	    True	True	True	0.4757	0.334	0.1417
+AVG corpusSim	    True	True	False	0.3275	0.1568	0.1707
+AVG corpusSim	    True	False	True	0.4365	0.2759	0.1606
+AVG corpusSim	    True	False	False	0.3999	0.2293	0.1706
+AVG corpusSim	    False	True	True	0.4451	0.2717	0.1734
+AVG corpusSim	    False	True	False	0.302	0.1006	0.2014
+AVG corpusSim	    False	False	True	0.4125	0.241	0.1715
+AVG corpusSim	    False	False	False	0.3727	0.1947	0.178
+AVG knowledgeSim	True	True	True	0.3993	0.2615	0.1378
+AVG knowledgeSim	True	True	False	0.2057	0.0245	0.1812
+AVG knowledgeSim	True	False	True	0.3422	0.1968	0.1454
+AVG knowledgeSim	True	False	False	0.2756	0.1142	0.1614
+AVG knowledgeSim	False	True	True	0.3149	0.1527	0.1622
+AVG knowledgeSim	False	True	False	0.1632	0.0092	0.154
+AVG knowledgeSim	False	False	True	0.3012	0.1644	0.1368
+AVG knowledgeSim	False	False	False	0.2386	0.1017	0.1369
