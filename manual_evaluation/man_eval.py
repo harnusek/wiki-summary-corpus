@@ -7,7 +7,6 @@ Requires running server and outputs from experiments
 """
 import requests
 import json
-import math
 import os
 
 def all_config_testing():
@@ -105,7 +104,7 @@ def load_experiment(name):
 
 if __name__ == '__main__':
     EXPERIMENT = averaged_experiments()
-    fname = "reports/man-eval-report-averaged.txt"
+    fname = "reports/man-eval-report-averaged-fancy.txt"
     file = open(fname, "w")
     file.write('method\t\tuse_lem\tuse_pos\tuse_stop\terror\n')
     print('method\t\tuse_lem\tuse_pos\tuse_stop\terror')
