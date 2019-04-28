@@ -17,6 +17,9 @@ DATA_DIR = 'data'
 DB_NAME = 'summaries_sk_wikipedia'
 
 def all_config_testing():
+    """
+    Start evaluation with every configuration
+    """
     for method in ['corpusSim','knowledgeSim']:
         for use_lem in [True, False]:
             for use_pos in [True, False]:
@@ -24,7 +27,13 @@ def all_config_testing():
                     triplet_testing(method, use_lem, use_pos, use_stop)
 
 def triplet_testing(method, use_lem, use_pos, use_stop):
-    print(fname)
+    """
+    Start evaluation with params
+    :param method:
+    :param use_lem:
+    :param use_pos:
+    :param use_stop:
+    """
     headers = {'content-type': 'application/json'}
     url = 'http://localhost:5000/api/' + method
     data = {
@@ -52,10 +61,15 @@ def triplet_testing(method, use_lem, use_pos, use_stop):
     POS = round(sum_POS/count,4)
     NEG = round(sum_NEG/count,4)
     DIFF = round(POS-NEG,4)
-    file.write('AVG '+method+'\tlem:'+str(use_lem)+'\tpos:'+str(use_pos)+'\tstop:'+str(use_stop)+'\t'+str(POS)+'\t'+str(NEG)+'\t'+str(DIFF)+'\n')
-    print('AVG', method,'\tlem:', use_lem,'pos:', use_pos,'stop:', use_stop, POS, NEG, DIFF)
+    file.write(method+'\t'+str(use_lem)+'\t'+str(use_pos)+'\t'+str(use_stop)+'\t'+str(POS)+'\t'+str(NEG)+'\t'+str(DIFF)+'\n')
+    print(method+'\t'+str(use_lem)+'\t'+str(use_pos)+'\t'+str(use_stop)+'\t'+str(POS)+'\t'+str(NEG)+'\t'+str(DIFF))
 
 def select_sentences(count, domain):
+    """
+    :param count:
+    :param domain:
+    :return: Sentences from database
+    """
     sql = """select sentence.text
             from sentence
             join summary on summary_id = summary.id
@@ -78,20 +92,22 @@ def select_sentences(count, domain):
     return triplets
 
 def triplets_all_domains():
-    pocet = 1
-    database = [select_sentences(2*pocet,domain) for domain in DOMAINS]
+    """
+    :return: List of 10 triplets from every domain
+    """
+    count = 10
+    database = [select_sentences(2*count,domain) for domain in DOMAINS]
     for index in range(len(database)):
-        sent = database[index][:pocet]
-        sent_POS = database[index][pocet:]
-        sent_NEG = database[index-1][pocet:]
-        # print(sent,sent_POS,sent_NEG)
-        for i in range(pocet):
+        sent = database[index][:count]
+        sent_POS = database[index][count:]
+        sent_NEG = database[index-1][count:]
+        for i in range(count):
             yield [sent[i], sent_POS[i], sent_NEG[i]]
 
 if __name__ == '__main__':
-    fname = time.strftime("reports/%Y-%m-%d-%H-%M") + "(1x20).txt"
-    file =  open(fname, "a")
-    file.write('[all domains] ')
-    file.write('pos tagset basic, knowled with jaccard\n\n')
+    fname = "reports/auto-eval-report-10x20.txt"
+    file =  open(fname, "w")
+    file.write('method\t\tuse_lem\tuse_pos\tuse_stop\tpos\nneg\ndiff\n')
+    print('method\t\tuse_lem\tuse_pos\tuse_stop\tpos\nneg\ndiff\n')
     all_config_testing()
     file.close()
