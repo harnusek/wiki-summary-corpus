@@ -18,6 +18,10 @@ def filter_opts(filter,options):
     return None
 
 def load_page(name):
+    """
+    :param name:
+    :return: page downloaded from wikipedia
+    """
     try:
         page = wikipedia.WikipediaPage(name)
         print(name)
@@ -33,6 +37,10 @@ def load_page(name):
         pass
 
 def save_summary(page):
+    """
+    Save summary to file
+    :param page:
+    """
     url = page.url
     title = page.title
     id = page.pageid
@@ -44,8 +52,11 @@ def save_summary(page):
         file.write(summary)
     print('\t : success')
 
-
 def process_domain(debug=False):
+    """
+    Download and save all summaries from list in file
+    :param debug:
+    """
     if not os.path.exists(directory):
         os.makedirs(directory)
     with open(source_file) as file:
@@ -56,4 +67,4 @@ def process_domain(debug=False):
             time.sleep(1)
 
 if __name__ == "__main__":
-    process_domain(True)
+    process_domain()

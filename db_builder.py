@@ -11,6 +11,10 @@ DATA_DIR = 'data'
 DB_NAME = 'summaries_sk_wikipedia'
 
 def tokenize(text):
+    """
+    :param text:
+    :return: List of all sentences in text
+    """
     text = re.sub(r" ?\([^)]+\)", "", text)
     url = 'http://nlp.bednarik.top/ssplit/json'
     payload = {'input': text.encode('utf-8'), 'method': 'STAT'}
@@ -21,6 +25,11 @@ def tokenize(text):
     return sentences
 
 def insert_domain(label):
+    """
+    Insert domain to DB
+    :param label:
+    :return: id of inserted domain
+    """
     sql = """INSERT INTO domain(label)
              VALUES(%s) RETURNING id;"""
     id = None
@@ -39,6 +48,14 @@ def insert_domain(label):
     return id
 
 def insert_summary(title,pageid,url,domain_id):
+    """
+    Insert summary to DB
+    :param title:
+    :param pageid:
+    :param url:
+    :param domain_id:
+    :return: id of inserted summary
+    """
     sql = """INSERT INTO summary(title,pageid,url,domain_id)
              VALUES(%s,%s,%s,%s) RETURNING id;"""
     id = None
@@ -57,6 +74,12 @@ def insert_summary(title,pageid,url,domain_id):
     return id
 
 def insert_sentence(rank,text,summary_id):
+    """
+    Insert sentence to DB
+    :param rank:
+    :param text:
+    :param summary_id:
+    """
     sql = """INSERT INTO sentence(rank,text,summary_id)
              VALUES(%s,%s,%s);"""
     id = None
@@ -73,6 +96,10 @@ def insert_sentence(rank,text,summary_id):
             conn.close()
 
 def build_database(DEBUG=False):
+    """
+    Insert corpus from files to DB in cascades
+    :param DEBUG:
+    """
     if DEBUG: print('DEBUG on')
     domain_id, summary_id = None, None
     for directory in os.listdir(DATA_DIR):
@@ -91,5 +118,5 @@ def build_database(DEBUG=False):
                 if not DEBUG: insert_sentence(rank,text,summary_id)
 
 if __name__ == "__main__":
-    build_database(DEBUG=True)
+    build_database()
 
